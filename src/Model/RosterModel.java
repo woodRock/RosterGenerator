@@ -2,6 +2,7 @@ package Model;
 
 import Model.Shift.Shift;
 import Model.Staff.SECTION.*;
+import sun.swing.SwingUtilities2;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -23,6 +24,12 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
       public enum DAY_NAMES {
         MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
     }
+
+    /**
+     * This stores the staff for this iteration of the roster
+     */
+    private ArrayList<Staff> staff = new ArrayList<>();
+
     public RosterModel(){
         // Initialize the second dimension of the roster
         for (int i=0; i<DAYS_IN_WEEK; i++){
@@ -39,21 +46,32 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
             this.add(new ArrayList<>());
         }
 
+        String[] staffToAdd = {"Az", "Jack", "Harry", "Jesse", "Jerome", "Bella"};
+        String[] startTimes = {"9am", "10am", "11am", "12pm", "3pm", "4pm", "5pm"};
+        String[] endTimes = {"3pm", "4pm", "5pm", "7pm", "9pm", "10pm", "TC"};
+
+        for (int i=0; i<staffToAdd.length - 1; i++){
+            staff.add(new Staff(staffToAdd[i]));
+        }
+
         // Initialise the second dimension of the roster
             // TODO: 3/7/18 properly implement this
         ArrayList<Shift> test_Shifts = new ArrayList<>();
-        test_Shifts.add(new Shift(
-                "Az", "9am", "4pm", MANAGER));
-        test_Shifts.add(new Shift(
-                "Jack", "4pm", "9pm", MANAGER));
-        test_Shifts.add(new Shift(
-                "Harry", "11pm", "7pm", RESTAURANT));
-        test_Shifts.add(new Shift(
-                "Jesse", "12pm", "9pm", OUTSIDE));
-        test_Shifts.add(new Shift(
-                "JRome", "10pm", "5pm", BAR_FLOOR));
-        test_Shifts.add(new Shift(
-                "Bella", "3pm", "9pm", BAR));
+
+        for (Staff s: staff){
+            String randomStartTime = startTimes[(int) Math.random()*(startTimes.length - 1)];
+            String randomEndTime = endTimes[(int) Math.random()*(endTimes.length - 1)];
+            Staff.SECTION randomSection = null;
+
+            // Finds a random section for a staff member
+            for (Staff.SECTION sec: Staff.SECTION.values()){
+                if (Math.random() > 0.5) {
+                    randomSection = sec;
+                    break;
+                }
+            }
+            test_Shifts.add(new Shift(s,randomStartTime, randomEndTime, randomSection));
+        }
 
         // Adds each day of shifts at a time
         for (int i=0; i<DAYS_IN_WEEK; i++) {

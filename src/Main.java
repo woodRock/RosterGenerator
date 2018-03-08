@@ -7,7 +7,8 @@ import View.TextUIView;
  */
 public class Main {
     public static void main(String[] args){
-
         TextUIView test = new TextUIView(new RosterModel("Penis"));
     }
 }
+
+

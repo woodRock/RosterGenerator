@@ -15,7 +15,7 @@ public class TextUIView {
 
     private final static int ROSTER_CHARACTER_WIDTH = 41;
 
-    private final static int CELL_SPACING = 5;
+    private final static int CELL_SPACING = 4;
 
     /**
      * The default constructor for the text representation
@@ -125,7 +125,7 @@ public class TextUIView {
         for (int i = 0; i< RosterModel.DAYS_IN_WEEK; i++) {
             String name = roster.getRoster().get(m).get(n).getName();
             if (name.length() > CELL_SPACING)
-                name = name.substring(0,5);
+                name = name.substring(0,CELL_SPACING);
             int nameLength = roster.getRoster().get(m).get(n).getName().length();
             if (nameLength == 5){
                 endSpace = "";

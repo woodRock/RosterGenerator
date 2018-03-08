@@ -36,9 +36,9 @@ public class Shift {
     /**
      * Default constructor for a shift, not fully implemented yet
      */
-    public Shift(String name, String startTime, String endTime, Staff.SECTION section){
+    public Shift(Staff staff, String startTime, String endTime, Staff.SECTION section){
         this.shiftType = new DayShift();
-        this.staffMember = new Staff(name);
+        this.staffMember = staff;
         this.section = section;
         this.startTime = startTime;
         this.endTime = endTime;
