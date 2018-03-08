@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="RosterGenerator2000">
+    <output-path>$PROJECT_DIR$/out/artifacts/RosterGenerator2000</output-path>
+    <root id="archive" name="RosterGenerator2000.jar">
+      <element id="dir-copy" path="$PROJECT_DIR$" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
