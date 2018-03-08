@@ -1,10 +1,7 @@
 package View;
 
 import Model.RosterModel;
-import Model.Shift.Shift;
 import Model.Staff;
-
-import java.util.ArrayList;
 
 /**
  * This class captures allows for the roster to be represented as text

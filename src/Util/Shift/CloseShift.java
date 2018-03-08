@@ -1,4 +1,4 @@
-package Model.Shift;
+package Util.Shift;
 
 /**
  * This class implemented the StrategyShift interface and

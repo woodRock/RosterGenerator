@@ -1,8 +1,8 @@
-package Model.Heuristic;
+package Util.Heuristic;
 
-import Model.Shift.Shift;
+import Util.Shift.Shift;
 
-import static Model.Heuristic.StrategyHeuristic.QUALITY.*;
+import static Util.Heuristic.StrategyHeuristic.QUALITY.*;
 /**
  * This class captures the notion of deciding whether or not
  * a staff member is available for a rostered shift, the Availability

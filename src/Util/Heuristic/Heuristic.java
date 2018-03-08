@@ -1,6 +1,6 @@
-package Model.Heuristic;
+package Util.Heuristic;
 
-import Model.Shift.Shift;
+import Util.Shift.Shift;
 
 public abstract class Heuristic {
 

@@ -1,4 +1,4 @@
-package Model.Shift;
+package Util.Shift;
 
 /**
  * This class captures the notion of a DayShift;

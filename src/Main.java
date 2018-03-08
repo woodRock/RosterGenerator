@@ -1,3 +1,4 @@
+import Model.RandomRoster;
 import Model.RosterModel;
 import View.TextUIView;
 
@@ -7,7 +8,7 @@ import View.TextUIView;
  */
 public class Main {
     public static void main(String[] args){
-        TextUIView test = new TextUIView(new RosterModel("Penis"));
+        TextUIView test = new TextUIView(new RandomRoster("Penis"));
     }
 }
 

@@ -1,4 +1,4 @@
-package Model.Shift;
+package Util.Shift;
 
 import Model.Staff;
 

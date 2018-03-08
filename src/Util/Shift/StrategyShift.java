@@ -1,4 +1,4 @@
-package Model.Shift;
+package Util.Shift;
 
 /**
  * This interface takes into account the different types of
