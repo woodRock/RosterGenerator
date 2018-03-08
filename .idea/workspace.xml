@@ -7,38 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7676aaa-2f94-40c1-b6fd-d2af3f85d29a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Model/RandomRoster.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/RosterGenerator/Main.class" afterPath="$PROJECT_DIR$/out/production/RosterGenerator/Main.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RosterGenerator/Model/Heuristic/Availability.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RosterGenerator/Model/Heuristic/Heuristic.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RosterGenerator/Model/Heuristic/Preferred.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RosterGenerator/Model/Heuristic/Required.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RosterGenerator/Model/Heuristic/StrategyHeuristic$QUALITY.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RosterGenerator/Model/Heuristic/StrategyHeuristic.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RosterGenerator/Model/RosterModel$DAY_NAMES.class" afterPath="$PROJECT_DIR$/out/production/RosterGenerator/Model/RosterModel$DAY_NAMES.class" />
       <change beforePath="$PROJECT_DIR$/out/production/RosterGenerator/Model/RosterModel.class" afterPath="$PROJECT_DIR$/out/production/RosterGenerator/Model/RosterModel.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RosterGenerator/Model/Shift/CloseShift.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RosterGenerator/Model/Shift/DayShift.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RosterGenerator/Model/Shift/ManagerShift.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RosterGenerator/Model/Shift/Shift.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RosterGenerator/Model/Shift/SplitShift.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RosterGenerator/Model/Shift/StrategyShift.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/out/production/RosterGenerator/View/TextUIView.class" afterPath="$PROJECT_DIR$/out/production/RosterGenerator/View/TextUIView.class" />
       <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Heuristic/Availability.java" afterPath="$PROJECT_DIR$/src/Util/Heuristic/Availability.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Heuristic/Heuristic.java" afterPath="$PROJECT_DIR$/src/Util/Heuristic/Heuristic.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Heuristic/Preferred.java" afterPath="$PROJECT_DIR$/src/Util/Heuristic/Preferred.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Heuristic/Required.java" afterPath="$PROJECT_DIR$/src/Util/Heuristic/Required.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Heuristic/StrategyHeuristic.java" afterPath="$PROJECT_DIR$/src/Util/Heuristic/StrategyHeuristic.java" />
       <change beforePath="$PROJECT_DIR$/src/Model/RosterModel.java" afterPath="$PROJECT_DIR$/src/Model/RosterModel.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Shift/CloseShift.java" afterPath="$PROJECT_DIR$/src/Util/Shift/CloseShift.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Shift/DayShift.java" afterPath="$PROJECT_DIR$/src/Util/Shift/DayShift.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Shift/ManagerShift.java" afterPath="$PROJECT_DIR$/src/Util/Shift/ManagerShift.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Shift/Shift.java" afterPath="$PROJECT_DIR$/src/Util/Shift/Shift.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Shift/SplitShift.java" afterPath="$PROJECT_DIR$/src/Util/Shift/SplitShift.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Shift/StrategyShift.java" afterPath="$PROJECT_DIR$/src/Util/Shift/StrategyShift.java" />
       <change beforePath="$PROJECT_DIR$/src/View/TextUIView.java" afterPath="$PROJECT_DIR$/src/View/TextUIView.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -51,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="TextUIView.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TextUIView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/View/TextUIView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2146">
-              <caret line="138" column="33" lean-forward="false" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="33" />
+            <state relative-caret-position="480">
+              <caret line="132" column="29" lean-forward="false" selection-start-line="132" selection-start-column="29" selection-end-line="132" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,120 +39,18 @@
       <file leaf-file-name="RosterModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/RosterModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+            <state relative-caret-position="219">
+              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2049#2050#0" expanded="true" />
-                <element signature="e#2090#2091#0" expanded="true" />
-                <element signature="e#2114#2115#0" expanded="true" />
-                <element signature="e#2155#2156#0" expanded="true" />
-                <element signature="e#2179#2180#0" expanded="true" />
-                <element signature="e#2213#2214#0" expanded="true" />
-                <element signature="e#2267#2268#0" expanded="true" />
-                <element signature="e#2294#2295#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-              <folding>
-                <element signature="e#237#238#0" expanded="true" />
-                <element signature="e#312#313#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CloseShift.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Util/Shift/CloseShift.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-18">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DayShift.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Util/Shift/DayShift.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ManagerShift.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Util/Shift/ManagerShift.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-18">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Shift.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Util/Shift/Shift.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding>
-                <element signature="e#1021#1022#0" expanded="true" />
-                <element signature="e#1070#1071#0" expanded="true" />
-                <element signature="e#1105#1106#0" expanded="true" />
-                <element signature="e#1142#1143#0" expanded="true" />
-                <element signature="e#1175#1176#0" expanded="true" />
-                <element signature="e#1210#1211#0" expanded="true" />
-                <element signature="e#1246#1247#0" expanded="true" />
-                <element signature="e#1285#1286#0" expanded="true" />
-                <element signature="e#1318#1319#0" expanded="true" />
-                <element signature="e#1354#1355#0" expanded="true" />
-                <element signature="e#1383#1384#0" expanded="true" />
-                <element signature="e#1415#1416#0" expanded="true" />
-                <element signature="e#1456#1457#0" expanded="true" />
-                <element signature="e#1486#1487#0" expanded="true" />
-                <element signature="e#1515#1516#0" expanded="true" />
-                <element signature="e#1541#1542#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SplitShift.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Util/Shift/SplitShift.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-18">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StrategyShift.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Util/Shift/StrategyShift.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RandomRoster.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/RandomRoster.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#2047#2048#0" expanded="true" />
+                <element signature="e#2088#2089#0" expanded="true" />
+                <element signature="e#2112#2113#0" expanded="true" />
+                <element signature="e#2153#2154#0" expanded="true" />
+                <element signature="e#2177#2178#0" expanded="true" />
+                <element signature="e#2211#2212#0" expanded="true" />
+                <element signature="e#2265#2266#0" expanded="true" />
+                <element signature="e#2292#2293#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -230,11 +101,11 @@
         <option value="$PROJECT_DIR$/src/Model/Staff.java" />
         <option value="$PROJECT_DIR$/src/Model/Shift/DayShift.java" />
         <option value="$PROJECT_DIR$/src/Model/Shift/Shift.java" />
-        <option value="$PROJECT_DIR$/src/View/TextUIView.java" />
         <option value="$PROJECT_DIR$/src/Util/Shift/StrategyShift.java" />
         <option value="$PROJECT_DIR$/src/Model/RandomRoster.java" />
-        <option value="$PROJECT_DIR$/src/Model/RosterModel.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Model/RosterModel.java" />
+        <option value="$PROJECT_DIR$/src/View/TextUIView.java" />
       </list>
     </option>
   </component>
@@ -474,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520495152524</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Random RosterGenerator 2000 Complete - now an implementation of the roster class">
+      <created>1520495404183</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1520495404183</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -516,7 +394,8 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="Second commit" />
     <MESSAGE value="Random RosterGenerator 2000 Complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Random RosterGenerator 2000 Complete" />
+    <MESSAGE value="Random RosterGenerator 2000 Complete - now an implementation of the roster class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Random RosterGenerator 2000 Complete - now an implementation of the roster class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -540,14 +419,14 @@
           <caret line="16" column="15" lean-forward="false" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2049#2050#0" expanded="true" />
-            <element signature="e#2090#2091#0" expanded="true" />
-            <element signature="e#2114#2115#0" expanded="true" />
-            <element signature="e#2155#2156#0" expanded="true" />
-            <element signature="e#2179#2180#0" expanded="true" />
-            <element signature="e#2213#2214#0" expanded="true" />
-            <element signature="e#2267#2268#0" expanded="true" />
-            <element signature="e#2294#2295#0" expanded="true" />
+            <element signature="e#2047#2048#0" expanded="true" />
+            <element signature="e#2088#2089#0" expanded="true" />
+            <element signature="e#2112#2113#0" expanded="true" />
+            <element signature="e#2153#2154#0" expanded="true" />
+            <element signature="e#2177#2178#0" expanded="true" />
+            <element signature="e#2211#2212#0" expanded="true" />
+            <element signature="e#2265#2266#0" expanded="true" />
+            <element signature="e#2292#2293#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -631,14 +510,14 @@
           <caret line="16" column="15" lean-forward="false" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2049#2050#0" expanded="true" />
-            <element signature="e#2090#2091#0" expanded="true" />
-            <element signature="e#2114#2115#0" expanded="true" />
-            <element signature="e#2155#2156#0" expanded="true" />
-            <element signature="e#2179#2180#0" expanded="true" />
-            <element signature="e#2213#2214#0" expanded="true" />
-            <element signature="e#2267#2268#0" expanded="true" />
-            <element signature="e#2294#2295#0" expanded="true" />
+            <element signature="e#2047#2048#0" expanded="true" />
+            <element signature="e#2088#2089#0" expanded="true" />
+            <element signature="e#2112#2113#0" expanded="true" />
+            <element signature="e#2153#2154#0" expanded="true" />
+            <element signature="e#2177#2178#0" expanded="true" />
+            <element signature="e#2211#2212#0" expanded="true" />
+            <element signature="e#2265#2266#0" expanded="true" />
+            <element signature="e#2292#2293#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -708,14 +587,14 @@
           <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2049#2050#0" expanded="true" />
-            <element signature="e#2090#2091#0" expanded="true" />
-            <element signature="e#2114#2115#0" expanded="true" />
-            <element signature="e#2155#2156#0" expanded="true" />
-            <element signature="e#2179#2180#0" expanded="true" />
-            <element signature="e#2213#2214#0" expanded="true" />
-            <element signature="e#2267#2268#0" expanded="true" />
-            <element signature="e#2294#2295#0" expanded="true" />
+            <element signature="e#2047#2048#0" expanded="true" />
+            <element signature="e#2088#2089#0" expanded="true" />
+            <element signature="e#2112#2113#0" expanded="true" />
+            <element signature="e#2153#2154#0" expanded="true" />
+            <element signature="e#2177#2178#0" expanded="true" />
+            <element signature="e#2211#2212#0" expanded="true" />
+            <element signature="e#2265#2266#0" expanded="true" />
+            <element signature="e#2292#2293#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -782,14 +661,14 @@
           <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2049#2050#0" expanded="true" />
-            <element signature="e#2090#2091#0" expanded="true" />
-            <element signature="e#2114#2115#0" expanded="true" />
-            <element signature="e#2155#2156#0" expanded="true" />
-            <element signature="e#2179#2180#0" expanded="true" />
-            <element signature="e#2213#2214#0" expanded="true" />
-            <element signature="e#2267#2268#0" expanded="true" />
-            <element signature="e#2294#2295#0" expanded="true" />
+            <element signature="e#2047#2048#0" expanded="true" />
+            <element signature="e#2088#2089#0" expanded="true" />
+            <element signature="e#2112#2113#0" expanded="true" />
+            <element signature="e#2153#2154#0" expanded="true" />
+            <element signature="e#2177#2178#0" expanded="true" />
+            <element signature="e#2211#2212#0" expanded="true" />
+            <element signature="e#2265#2266#0" expanded="true" />
+            <element signature="e#2292#2293#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -869,14 +748,14 @@
           <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2049#2050#0" expanded="true" />
-            <element signature="e#2090#2091#0" expanded="true" />
-            <element signature="e#2114#2115#0" expanded="true" />
-            <element signature="e#2155#2156#0" expanded="true" />
-            <element signature="e#2179#2180#0" expanded="true" />
-            <element signature="e#2213#2214#0" expanded="true" />
-            <element signature="e#2267#2268#0" expanded="true" />
-            <element signature="e#2294#2295#0" expanded="true" />
+            <element signature="e#2047#2048#0" expanded="true" />
+            <element signature="e#2088#2089#0" expanded="true" />
+            <element signature="e#2112#2113#0" expanded="true" />
+            <element signature="e#2153#2154#0" expanded="true" />
+            <element signature="e#2177#2178#0" expanded="true" />
+            <element signature="e#2211#2212#0" expanded="true" />
+            <element signature="e#2265#2266#0" expanded="true" />
+            <element signature="e#2292#2293#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -923,14 +802,14 @@
           <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2049#2050#0" expanded="true" />
-            <element signature="e#2090#2091#0" expanded="true" />
-            <element signature="e#2114#2115#0" expanded="true" />
-            <element signature="e#2155#2156#0" expanded="true" />
-            <element signature="e#2179#2180#0" expanded="true" />
-            <element signature="e#2213#2214#0" expanded="true" />
-            <element signature="e#2267#2268#0" expanded="true" />
-            <element signature="e#2294#2295#0" expanded="true" />
+            <element signature="e#2047#2048#0" expanded="true" />
+            <element signature="e#2088#2089#0" expanded="true" />
+            <element signature="e#2112#2113#0" expanded="true" />
+            <element signature="e#2153#2154#0" expanded="true" />
+            <element signature="e#2177#2178#0" expanded="true" />
+            <element signature="e#2211#2212#0" expanded="true" />
+            <element signature="e#2265#2266#0" expanded="true" />
+            <element signature="e#2292#2293#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1066,19 +945,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/TextUIView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2146">
-          <caret line="138" column="33" lean-forward="false" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Util/Shift/CloseShift.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
+        <state relative-caret-position="232">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
@@ -1094,7 +963,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Util/Shift/ManagerShift.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
+        <state relative-caret-position="174">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
@@ -1127,7 +996,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Util/Shift/SplitShift.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
+        <state relative-caret-position="203">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
@@ -1151,24 +1020,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/RosterModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2049#2050#0" expanded="true" />
-            <element signature="e#2090#2091#0" expanded="true" />
-            <element signature="e#2114#2115#0" expanded="true" />
-            <element signature="e#2155#2156#0" expanded="true" />
-            <element signature="e#2179#2180#0" expanded="true" />
-            <element signature="e#2213#2214#0" expanded="true" />
-            <element signature="e#2267#2268#0" expanded="true" />
-            <element signature="e#2294#2295#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -1176,6 +1027,34 @@
           <folding>
             <element signature="e#237#238#0" expanded="true" />
             <element signature="e#312#313#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/RosterModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2047#2048#0" expanded="true" />
+            <element signature="e#2088#2089#0" expanded="true" />
+            <element signature="e#2112#2113#0" expanded="true" />
+            <element signature="e#2153#2154#0" expanded="true" />
+            <element signature="e#2177#2178#0" expanded="true" />
+            <element signature="e#2211#2212#0" expanded="true" />
+            <element signature="e#2265#2266#0" expanded="true" />
+            <element signature="e#2292#2293#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/TextUIView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="132" column="29" lean-forward="false" selection-start-line="132" selection-start-column="29" selection-end-line="132" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -12,7 +12,7 @@ public class TextUIView {
 
     private final static int ROSTER_CHARACTER_WIDTH = 41;
 
-    private final static int CELL_SPACING = 4;
+    private final static int CELL_SPACING = 5;
 
     /**
      * The default constructor for the text representation
@@ -123,7 +123,7 @@ public class TextUIView {
             String name = roster.getRoster().get(m).get(n).getName();
             if (name.length() > CELL_SPACING)
                 name = name.substring(0,CELL_SPACING);
-            int nameLength = roster.getRoster().get(m).get(n).getName().length();
+            int nameLength = name.length();
             if (nameLength == 5){
                 endSpace = "";
                 startSpace = "|";

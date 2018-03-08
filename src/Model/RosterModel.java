@@ -32,8 +32,6 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
         }
     }
 
-
-
     /**
      * This method sorts the roster by sections
      * @param section to be sorted into
