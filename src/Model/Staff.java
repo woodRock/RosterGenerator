@@ -36,18 +36,25 @@ public class Staff {
 
     private boolean shiftManager;
 
-    private ArrayList<SKILL> skills;
+    private ArrayList<SKILL> skills = new ArrayList<>();
 
-    private ArrayList<SECTION> sections;
+    private ArrayList<SECTION> sections = new ArrayList<>();
 
     private int maxShiftNo;
 
     private int minShiftNo;
 
-    private ArrayList<String> daysCantWork;
+    private ArrayList<String> daysCantWork = new ArrayList<>();
 
-    public Staff(String name){
+    /**
+     * Default constructor for a Staff member
+     * @param name first name for the roster text
+     * @param isDM whether or not they are a manager
+     */
+    public Staff(String name, boolean isDM){
         this.name = name;
+        if (isDM)
+            this.sections.add(SECTION.MANAGER);
     }
 
     public String getName(){
@@ -66,5 +73,18 @@ public class Staff {
                 return false;
         }
         return true;
+    }
+
+    /**
+     * This method checks whether a staff member is a duty manager
+     * @return true if they are, false otherwise
+     */
+    public boolean isDm(){
+        // Is DM one of there sections?
+        for (SECTION s: sections){
+            if (s.equals(SECTION.MANAGER))
+                return true;
+        }
+        return false;
     }
 }
