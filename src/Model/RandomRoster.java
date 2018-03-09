@@ -25,10 +25,9 @@ public class RandomRoster extends RosterModel {
      *  and then create the roster based off that
      */
     public RandomRoster(String date){
+        // Initializes the rosters days using the super class
         super(date);
-        // Initialize the second dimension of the roster
-        for (int i=0; i<DAYS_IN_WEEK; i++)
-            this.add(new ArrayList<>());
+        // Populates the roster randomly
         run();
     }
 

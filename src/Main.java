@@ -9,6 +9,7 @@ import View.TextUIView;
  */
 public class Main {
     public static void main(String[] args){
+        System.out.print("Welcome to the RosterGenerator2000!\n");
         RandomRoster model = new RandomRoster("March, Mon-Sun");
         TextUIView view = new TextUIView(model);
         TextController controller = new TextController(model, view);

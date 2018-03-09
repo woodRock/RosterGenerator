@@ -8,6 +8,8 @@ import Util.Staff;
  */
 public class TextUIView {
 
+    private RosterModel roster;
+
     private String rosterText;
 
     private final static int ROSTER_CHARACTER_WIDTH = 41;
@@ -20,7 +22,7 @@ public class TextUIView {
      * @param roster to be converted to text
      */
     public TextUIView(RosterModel roster){
-        System.out.print("Welcome to the RosterGenerator2000!\n");
+        this.roster = roster;
         this.rosterText = buildRoster(roster);
     }
 
@@ -100,8 +102,8 @@ public class TextUIView {
 
         // Adds the start times for all of the shifts to the roster
         for (int i = 0; i< RosterModel.DAYS_IN_WEEK; i++) {
-            String startTime = roster.getRoster().get(m).get(n).getStartTime();
-            int startTimeLength = roster.getRoster().get(m).get(n).getStartTime().length();
+            String startTime = roster.get(m).get(n).getStartTime();
+            int startTimeLength = roster.get(m).get(n).getStartTime().length();
             if (startTimeLength == 5){
                 endSpace = "";
                 startSpace = "|";
@@ -124,7 +126,7 @@ public class TextUIView {
 
         // Loop adds the names for the shift to the roster
         for (int i = 0; i< RosterModel.DAYS_IN_WEEK; i++) {
-            String name = roster.getRoster().get(m).get(n).getName();
+            String name = roster.get(m).get(n).getName();
             if (name.length() > CELL_SPACING)
                 name = name.substring(0,CELL_SPACING);
             int nameLength = name.length();
@@ -156,8 +158,8 @@ public class TextUIView {
 
         // Loop adds the end times for shifts to the roster
         for (int i = 0; i< RosterModel.DAYS_IN_WEEK; i++) {
-            String endTime = roster.getRoster().get(m).get(n).getEndTime();
-            int endTimeLength = roster.getRoster().get(m).get(n).getEndTime().length();
+            String endTime = roster.get(m).get(n).getEndTime();
+            int endTimeLength = roster.get(m).get(n).getEndTime().length();
             if (endTimeLength == 5){
                 endSpace = "";
                 startSpace = "|";
@@ -225,5 +227,13 @@ public class TextUIView {
         }
         output += "-\n";
         return output;
+    }
+
+    /**
+     * This method updates the text display of the roster
+     * given that a change has been made
+     */
+    public void update(){
+        this.rosterText = buildRoster(this.roster);
     }
 }

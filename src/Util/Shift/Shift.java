@@ -56,6 +56,17 @@ public class Shift {
         return this.staffMember.getName().equals(name);
     }
 
+    /**
+     * This method returns the shift as a string
+     * @return the string ready to be displayed
+     */
+    public String toString(){
+        String out = "";
+        out += this.staffMember.getName() + ":\t" +
+                this.startTime + "-" + this.endTime + "\n";
+        return out;
+    }
+
     public String getName(){
         return this.staffMember.getName();
     }

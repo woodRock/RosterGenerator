@@ -40,6 +40,8 @@ public class Staff {
 
     private ArrayList<RosterModel.DAY_NAMES> daysCantWork = new ArrayList<>();
 
+    private int shiftCount;
+
     /**
      * Default constructor for a Staff member
      * @param name first name for the roster text
@@ -49,6 +51,7 @@ public class Staff {
         this.name = name;
         if (isDM)
             this.sections.add(SECTION.MANAGER);
+        shiftCount = 0;
     }
 
     public String getName(){
