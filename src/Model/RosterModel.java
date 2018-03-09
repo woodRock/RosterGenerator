@@ -1,6 +1,7 @@
 package Model;
 
 import Util.Shift.Shift;
+import Util.Staff;
 
 import java.util.ArrayList;
 
@@ -25,7 +26,39 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
      */
     protected ArrayList<Staff> staff = new ArrayList<>();
 
-    public RosterModel(){
+    private String date;
+
+    public RosterModel(){}
+
+    /**
+     * This section stores the information for the tweaks which affect
+     * the creation of the roster, (i.e. its selection process)
+     */
+    public boolean rain;
+
+    public enum Difficulty {
+
+        DEAD (0), EASY (1), MEDIUM (2), HARD (3), INSANE (4);
+
+        private final int level;
+
+        Difficulty(int i){
+            this.level = i;
+        }
+
+        public int getLevel(){
+            return level;
+        }
+    }
+
+    private Difficulty difficulty;
+
+    /**
+     * This is the default constructor for the RosterModel
+     * @param date to be printed at the top of the roster
+     */
+    public RosterModel(String date){
+        this.date = date;
         // Initialize the second dimension of the roster
         for (int i=0; i<DAYS_IN_WEEK; i++){
             this.add(new ArrayList<>());
@@ -42,7 +75,7 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
          * This ia the output roster that comprises of only shifts
          * that belong to the section parameter
          */
-        RosterModel output = new RosterModel();
+        RosterModel output = new RosterModel(date);
 
         /**
          * This nested loop traverses the roster and isolates the
@@ -64,19 +97,44 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
         return output;
     }
 
-    public Shift getShift(int i){
-        return this.get(i).get(0);
-    }
+    public void run(){ }
 
-    public int rows(){
-        return this.get(0).size();
-    }
-
-    public int cols(){
-        return this.size();
+    /**
+     * This method returns a shift from the Roster based on
+     * the staff member who may be working that day
+     * @param day to check for the staff member
+     * @param name to find on the shifts of the day
+     * @return the shift if it exists, false otherwise
+     */
+    public Shift getShift(int day, String name){
+        for (Shift s: this.get(day)){
+            if (s.equals(name))
+                return s;
+        }
+        return null;
     }
 
     public ArrayList<ArrayList<Shift>> getRoster() {
         return this;
+    }
+
+    public String getDate(){
+        return date;
+    }
+
+    public void setRain (boolean b){
+        this.rain = b;
+    }
+
+    /**
+     * This method sets the difficulty of the model based
+     * on a number
+     * @param i
+     */
+    public void setDifficulty(int i){
+        for (Difficulty d: Difficulty.values()){
+            if (d.getLevel() == i)
+                this.difficulty = d;
+        }
     }
 }

@@ -1,30 +1,44 @@
 package Model;
 
 import Util.Shift.Shift;
+import Util.Staff;
 
 import java.util.ArrayList;
 
 public class RandomRoster extends RosterModel {
 
     /**
-     *  The normal constructor for the roster class;
+     * These are the staff for the randomly generated roster, eventually they will be
+     * stored and read from a serialized file
      */
-    public RandomRoster(String str){
+    private String[] staffToAdd = {"Az", "Jack", "Harry", "Jesse", "Jerome", "Bella"};
+
+    /**
+     * These are the start times, they will eventually be stored as a tuple linked to a
+     * shift type, that will store the end time and the break time as well
+     */
+    private String[] startTimes = {"9am", "10am", "11am", "12pm", "3pm", "4pm", "5pm"};
+    private String[] endTimes = {"3pm", "4pm", "5pm", "7pm", "9pm", "10pm", "TC"};
+
+    /**
+     *  The normal constructor for the Random Roster, eventually needs to read a file
+     *  and then create the roster based off that
+     */
+    public RandomRoster(String date){
+        super(date);
         // Initialize the second dimension of the roster
-        for (int i=0; i<DAYS_IN_WEEK; i++){
+        for (int i=0; i<DAYS_IN_WEEK; i++)
             this.add(new ArrayList<>());
-        }
+        run();
+    }
 
-        String[] staffToAdd = {"Az", "Jack", "Harry", "Jesse", "Jerome", "Bella"};
-        String[] startTimes = {"9am", "10am", "11am", "12pm", "3pm", "4pm", "5pm"};
-        String[] endTimes = {"3pm", "4pm", "5pm", "7pm", "9pm", "10pm", "TC"};
-
-        for (int i=0; i<staffToAdd.length; i++){
+    /**
+     * This method generates the random roster and populated it
+     */
+    public void run(){
+        for (int i=0; i<staffToAdd.length; i++)
             staff.add(new Staff(staffToAdd[i], Math.random() > 0.9));
-        }
 
-        // Initialise the second dimension of the roster
-        // TODO: 3/7/18 properly implement this
         ArrayList<Shift> test_Shifts = new ArrayList<>();
 
         for (Staff s: staff){
@@ -39,19 +53,22 @@ public class RandomRoster extends RosterModel {
                 else {
                     // Dont assign a manger shift to a non dm
                     if (randomSection == Staff.SECTION.MANAGER)
-                        continue;
+                        randomSection = Staff.SECTION.OUTSIDE;
                     if (Math.random() > 0.5)
                         randomSection = sec;
                 }
             }
+
+            if (randomSection == null)
+                randomSection = Staff.SECTION.OUTSIDE;
+
             test_Shifts.add(new Shift(s,randomStartTime, randomEndTime, randomSection));
         }
 
         // Adds each day of shifts at a time
         for (int i=0; i<DAYS_IN_WEEK; i++) {
-            for (Shift s : test_Shifts) {
+            for (Shift s : test_Shifts)
                 this.get(i).add(s);
-            }
         }
     }
 }

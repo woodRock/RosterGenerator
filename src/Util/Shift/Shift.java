@@ -1,9 +1,11 @@
 package Util.Shift;
 
-import Model.Staff;
+import Model.RosterModel;
+import Util.Staff;
 
 /**
- * This class captures the notion of an individual shift
+ * This class captures the notion of an individual shift, it is a tuple and
+ * a linked-list that stores the information required to make informed rosters
  */
 public class Shift {
 
@@ -44,6 +46,16 @@ public class Shift {
         this.endTime = endTime;
     }
 
+    /**
+     * This method checks who is working the shift, against
+     * the staff member assumed to be working it
+     * @param name to be checked for
+     * @return true if working, false otherwise
+     */
+    public boolean equals(String name){
+        return this.staffMember.getName().equals(name);
+    }
+
     public String getName(){
         return this.staffMember.getName();
     }
@@ -72,7 +84,7 @@ public class Shift {
         return section;
     }
 
-    public String getDay(){
-        return " ";
+    public RosterModel.DAY_NAMES getDay(){
+        return RosterModel.DAY_NAMES.MONDAY;
     }
 }

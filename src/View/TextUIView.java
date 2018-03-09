@@ -1,7 +1,7 @@
 package View;
 
 import Model.RosterModel;
-import Model.Staff;
+import Util.Staff;
 
 /**
  * This class captures allows for the roster to be represented as text
@@ -20,11 +20,14 @@ public class TextUIView {
      * @param roster to be converted to text
      */
     public TextUIView(RosterModel roster){
+        System.out.print("Welcome to the RosterGenerator2000!\n");
         this.rosterText = buildRoster(roster);
+    }
 
-        /**
-         * Displays the text representation of the roster to the user
-         */
+    /**
+     * Displays the text representation of the roster to the user
+     */
+    public void print(){
         System.out.print(rosterText);
     }
 
@@ -37,6 +40,7 @@ public class TextUIView {
 
         // This will eventually be the full roster;
         String output = "";
+        output += getTitle(roster.getDate());
         output += addLine();
         output += addDays();
         output += addLine();
@@ -160,11 +164,15 @@ public class TextUIView {
             }
             if (endTimeLength == 4){
                 startSpace = "| ";
-                endSpace = " ";
+                endSpace = "";
             }
             if (endTimeLength == 3){
                 startSpace = "| ";
                 endSpace = " ";
+            }
+            if (endTimeLength == 2){
+                startSpace = "| ";
+                endSpace = "  ";
             }
             if (i == 0){
                 startSpace = "| ";
@@ -202,25 +210,6 @@ public class TextUIView {
 
         }
         output += " |\n";
-        return output;
-    }
-
-    /**
-     * This method adds a row of text to the roster
-     * @param str to be added along the row
-     * @return the finished row with padding
-     */
-    public String addRow(String str){
-        String space;
-        String output = "";
-        // Loop to go through the columns of the roster
-        for (int i = 0; i< RosterModel.DAYS_IN_WEEK; i++) {
-            if (i!=0)
-                space = " |";
-            else
-                space = "|";
-            output += space + str;
-        }
         return output;
     }
 

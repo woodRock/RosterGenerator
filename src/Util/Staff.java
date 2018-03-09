@@ -1,4 +1,6 @@
-package Model;
+package Util;
+
+import Model.RosterModel;
 
 import java.util.ArrayList;
 
@@ -32,19 +34,11 @@ public class Staff {
 
     private String name;
 
-    private EMPLOYMENT role;
-
-    private boolean shiftManager;
-
     private ArrayList<SKILL> skills = new ArrayList<>();
 
     private ArrayList<SECTION> sections = new ArrayList<>();
 
-    private int maxShiftNo;
-
-    private int minShiftNo;
-
-    private ArrayList<String> daysCantWork = new ArrayList<>();
+    private ArrayList<RosterModel.DAY_NAMES> daysCantWork = new ArrayList<>();
 
     /**
      * Default constructor for a Staff member
@@ -67,7 +61,7 @@ public class Staff {
      * @param day to check for
      * @return true if they can, false otherwise
      */
-    public boolean canWork(String day){
+    public boolean canWork(RosterModel.DAY_NAMES day){
         for (int i=0; i<daysCantWork.size(); i++){
             if (day.equals(daysCantWork.get(i)))
                 return false;
@@ -86,5 +80,14 @@ public class Staff {
                 return true;
         }
         return false;
+    }
+
+    /**
+     * This method adds a day that a staff member can't work to the
+     * staff class, such that it can be stored
+     * @param day
+     */
+    public void addDayCantWork(RosterModel.DAY_NAMES day){
+        daysCantWork.add(day);
     }
 }
