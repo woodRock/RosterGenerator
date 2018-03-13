@@ -25,7 +25,7 @@ public class TextController {
     /**
      * Patterns for the inputs that are allowed in the user input
      */
-    private static final Pattern COMMAND = Pattern.compile("run|exit|print|rain|mode|clear|add|rm|ls");
+    private static final Pattern COMMAND = Pattern.compile("run|exit|print|rain|mode|clear|add|rm|ls|swap");
 
     private static final Pattern BOOLEAN = Pattern.compile("on|off|true|false|0|1");
 
@@ -143,6 +143,14 @@ public class TextController {
                 sc.next();
             }
         }
+        if (in.equals("swap")){
+            try {
+                parseSwap(sc);
+            } catch (Exception e) {
+                displayError(e.getMessage());
+                sc.next();
+            }
+        }
     }
 
     /**
@@ -194,17 +202,35 @@ public class TextController {
      * @param sc scanner to read the input from
      * @throws Exception if there is an invalid input
      */
-    public void parseList(Scanner sc) throws Exception{
+    public void parseList(Scanner sc) throws Exception {
         if (!sc.hasNext())
             throw new Exception("Scanner is empty!\n");
         if (!sc.hasNext(OBJECTS))
             throw new Exception(OBJECT_ERROR_MSG);
         String in = sc.next();
-        if (in.equals("staff")){
+        if (in.equals("staff"))
             listStaff();
-        }
-        if (in.equals("shift")){
+        if (in.equals("shift"))
             listShift(parseDay(sc));
+    }
+
+    /**
+     * This method handles the parsing of swap commands
+     * @param sc scanner to read the input from
+     * @throws Exception if the user input is invalid
+     */
+    public void parseSwap(Scanner sc) throws Exception {
+        if (!sc.hasNext())
+            throw new Exception("Scanner is empty!\n");
+        if (!sc.hasNext(OBJECTS))
+            throw new Exception(OBJECT_ERROR_MSG);
+        String in = sc.next();
+        if (in.equals("shift")){
+            if (!swapShift(parseDay(sc), parseString(sc), parseDay(sc), parseString(sc)))
+                throw new Exception("Shift cannot be swapped!");
+        }
+        if (in.equals("staff")){
+
         }
     }
 
@@ -285,7 +311,7 @@ public class TextController {
      * command line user interface
      * @param sc scanner to read input from
      * @return the users string input if valid
-     * @throws Exception if an invalid input
+     * @throws Exception if an invalid inputs
      */
     public String parseString(Scanner sc) throws Exception{
         // Scanner is empty
@@ -364,7 +390,8 @@ public class TextController {
      */
     public boolean removeStaff(String name){
         boolean b = this.model.removeStaff(name);
-        this.view.update();
+        if (b)
+            this.view.update();
         return b;
     }
 
@@ -402,10 +429,33 @@ public class TextController {
         this.view.update();
     }
 
+    /**
+     * This method removes a shift from the model
+     * @param d day to remove the shift from
+     * @param name of the staff member who will no longer work
+     * @return true if successful, false otherwise
+     */
     public boolean removeShift(RosterModel.DAY_NAMES d, String name){
         boolean b = this.model.removeShift(d, name);
-        this.view.update();
+        if (b)
+            this.view.update();
         return b;
+    }
+
+    /**
+     * This method swaps two individual shifts with eachother
+     * @param d1 first day to be swapped
+     * @param n1 name of first staff member swapping
+     * @param d2 second day to swap with
+     * @param n2 name of the second staff member
+     * @return true if swap was successful, false otherwise
+     */
+    public boolean swapShift(
+            RosterModel.DAY_NAMES d1, String n1, RosterModel.DAY_NAMES d2, String n2){
+            boolean b = this.model.swapShift(d1, n1, d2, n2);
+            if (b)
+                this.view.update();
+            return b;
     }
 
     /**

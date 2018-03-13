@@ -8,6 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a7676aaa-2f94-40c1-b6fd-d2af3f85d29a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/TextController.java" afterPath="$PROJECT_DIR$/src/Controller/TextController.java" />
+      <change beforePath="$PROJECT_DIR$/src/Model/RosterModel.java" afterPath="$PROJECT_DIR$/src/Model/RosterModel.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,7 +24,7 @@
       <file leaf-file-name="RandomRoster.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/RandomRoster.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1131">
+            <state relative-caret-position="0">
               <caret line="42" column="26" lean-forward="false" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
               <folding />
             </state>
@@ -54,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasicRoster.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BasicRoster.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/BasicRoster.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="593">
-              <caret line="38" column="42" lean-forward="true" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+            <state relative-caret-position="448">
+              <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,11 +109,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RosterModel.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RosterModel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Model/RosterModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4872">
-              <caret line="187" column="21" lean-forward="false" selection-start-line="187" selection-start-column="21" selection-end-line="187" selection-end-column="21" />
+            <state relative-caret-position="652">
+              <caret line="186" column="36" lean-forward="true" selection-start-line="186" selection-start-column="36" selection-end-line="186" selection-end-column="36" />
               <folding>
                 <element signature="e#612#613#0" expanded="true" />
                 <element signature="e#650#651#0" expanded="true" />
@@ -121,16 +123,16 @@
                 <element signature="e#1043#1044#0" expanded="true" />
                 <element signature="e#1073#1074#0" expanded="true" />
                 <element signature="e#1107#1108#0" expanded="true" />
-                <element signature="e#4619#4620#0" expanded="true" />
-                <element signature="e#4651#4652#0" expanded="true" />
-                <element signature="e#4689#4690#0" expanded="true" />
-                <element signature="e#4718#4719#0" expanded="true" />
-                <element signature="e#4754#4755#0" expanded="true" />
-                <element signature="e#4787#4788#0" expanded="true" />
-                <element signature="e#4831#4832#0" expanded="true" />
-                <element signature="e#4885#4886#0" expanded="true" />
-                <element signature="e#5961#5962#0" expanded="true" />
-                <element signature="e#5989#5990#0" expanded="true" />
+                <element signature="e#6648#6649#0" expanded="true" />
+                <element signature="e#6680#6681#0" expanded="true" />
+                <element signature="e#6718#6719#0" expanded="true" />
+                <element signature="e#6747#6748#0" expanded="true" />
+                <element signature="e#6783#6784#0" expanded="true" />
+                <element signature="e#6816#6817#0" expanded="true" />
+                <element signature="e#6860#6861#0" expanded="true" />
+                <element signature="e#6914#6915#0" expanded="true" />
+                <element signature="e#7990#7991#0" expanded="true" />
+                <element signature="e#8018#8019#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,164 +141,20 @@
       <file leaf-file-name="TextController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/TextController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="203" column="24" lean-forward="true" selection-start-line="203" selection-start-column="24" selection-end-line="203" selection-end-column="24" />
+            <state relative-caret-position="646">
+              <caret line="455" column="18" lean-forward="true" selection-start-line="455" selection-start-column="18" selection-end-line="455" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#9821#9822#0" expanded="true" />
-                <element signature="e#9851#9852#0" expanded="true" />
-                <element signature="e#9952#9953#0" expanded="true" />
-                <element signature="e#9985#9986#0" expanded="true" />
-                <element signature="e#10637#10638#0" expanded="true" />
-                <element signature="e#10674#10675#0" expanded="true" />
-                <element signature="e#10809#10810#0" expanded="true" />
-                <element signature="e#10852#10853#0" expanded="true" />
-                <element signature="e#12964#12965#0" expanded="true" />
-                <element signature="e#13031#13032#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Scanner.class" pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/Scanner.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14761">
-              <caret line="552" column="0" lean-forward="false" selection-start-line="552" selection-start-column="0" selection-end-line="552" selection-end-column="0" />
-              <folding>
-                <marker date="1509141854000" expanded="false" signature="0:104" ph="/.../" />
-                <marker date="1509141854000" expanded="false" signature="133:1024" ph="..." />
-                <marker date="1509141854000" expanded="true" signature="2949:3119" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="3168:3729" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="3768:3969" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="4017:4213" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="4256:4450" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="4499:5724" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="5761:5902" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="5941:6086" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="6137:7692" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="6515:6772" ph="{...}" />
-                <marker date="1509141854000" expanded="false" signature="6566:6585" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="6614:6628" ph=" }" />
-                <marker date="1509141854000" expanded="false" signature="6694:6713" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="6748:6762" ph=" }" />
-                <marker date="1509141854000" expanded="false" signature="7727:7738" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="7813:7819" ph=" }" />
-                <marker date="1509141854000" expanded="false" signature="7857:7868" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="7943:7949" ph=" }" />
-                <marker date="1509141854000" expanded="true" signature="8001:8126" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="8178:8442" ph="{...}" />
-                <marker date="1509141854000" expanded="false" signature="8516:8527" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="8568:8574" ph=" }" />
-                <marker date="1509141854000" expanded="true" signature="8635:8719" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="8793:8867" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="8950:9070" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="9129:9406" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="9496:9554" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="9605:9654" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="9718:9792" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="9858:9927" ph="{...}" />
-                <marker date="1509141854000" expanded="false" signature="9960:9971" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="10041:10047" ph=" }" />
-                <marker date="1509141854000" expanded="true" signature="10094:10210" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="10279:10360" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="10420:10553" ph="{...}" />
-                <marker date="1509141854000" expanded="false" signature="10583:10594" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="10636:10642" ph=" }" />
-                <marker date="1509141854000" expanded="true" signature="10675:10803" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="10851:11000" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="11033:11196" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="11240:11387" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="11420:11494" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="11533:11688" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="11722:11971" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="12002:12715" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="12749:13470" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="13521:13633" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="13663:13893" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="13934:14237" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="14297:16703" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="16768:17840" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="17896:18492" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="18524:18631" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="18657:19057" ph="{...}" />
-                <marker date="1509141854000" expanded="false" signature="19095:19106" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="19132:19138" ph=" }" />
-                <marker date="1509141854000" expanded="false" signature="19170:19181" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="19206:19212" ph=" }" />
-                <marker date="1509141854000" expanded="true" signature="19260:19322" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="19369:19467" ph="{...}" />
-                <marker date="1509141854000" expanded="false" signature="19495:19506" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="19525:19531" ph=" }" />
-                <marker date="1509141854000" expanded="true" signature="19575:21054" ph="{...}" />
-                <marker date="1509141854000" expanded="false" signature="21078:21089" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="21114:21120" ph=" }" />
-                <marker date="1509141854000" expanded="true" signature="21160:21522" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="21560:21683" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="21716:21905" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="21936:22984" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="23015:23345" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="23372:23829" ph="{...}" />
-                <marker date="1509141854000" expanded="false" signature="23855:23866" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="23908:23914" ph=" }" />
-                <marker date="1509141854000" expanded="false" signature="23955:23966" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="24028:24034" ph=" }" />
-                <marker date="1509141854000" expanded="false" signature="24071:24082" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="24141:24147" ph=" }" />
-                <marker date="1509141854000" expanded="true" signature="24190:24731" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="24770:25468" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="25503:26007" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="26038:26802" ph="{...}" />
-                <marker date="1509141854000" expanded="false" signature="26845:26856" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="26921:26927" ph=" }" />
-                <marker date="1509141854000" expanded="true" signature="26972:27792" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="27853:27947" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="28009:28636" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="28676:29283" ph="{...}" />
-                <marker date="1509141854000" expanded="false" signature="29321:29332" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="29391:29397" ph=" }" />
-                <marker date="1509141854000" expanded="false" signature="29434:29445" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="29480:29486" ph=" }" />
-                <marker date="1509141854000" expanded="true" signature="29521:29619" ph="{...}" />
-                <marker date="1509141854000" expanded="false" signature="29653:29664" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="29707:29713" ph=" }" />
-                <marker date="1509141854000" expanded="true" signature="29756:30229" ph="{...}" />
-                <marker date="1509141854000" expanded="false" signature="30257:30268" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="30308:30314" ph=" }" />
-                <marker date="1509141854000" expanded="true" signature="30351:31123" ph="{...}" />
-                <marker date="1509141854000" expanded="false" signature="31158:31169" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="31213:31219" ph=" }" />
-                <marker date="1509141854000" expanded="true" signature="31263:31738" ph="{...}" />
-                <marker date="1509141854000" expanded="false" signature="31768:31779" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="31820:31826" ph=" }" />
-                <marker date="1509141854000" expanded="true" signature="31865:32642" ph="{...}" />
-                <marker date="1509141854000" expanded="false" signature="32675:32686" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="32728:32734" ph=" }" />
-                <marker date="1509141854000" expanded="true" signature="32776:33251" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="33305:33903" ph="{...}" />
-                <marker date="1509141854000" expanded="false" signature="33929:33940" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="33979:33985" ph=" }" />
-                <marker date="1509141854000" expanded="true" signature="34020:34799" ph="{...}" />
-                <marker date="1509141854000" expanded="false" signature="34833:34844" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="34887:34893" ph=" }" />
-                <marker date="1509141854000" expanded="true" signature="34936:35409" ph="{...}" />
-                <marker date="1509141854000" expanded="false" signature="35437:35448" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="35488:35494" ph=" }" />
-                <marker date="1509141854000" expanded="true" signature="35531:36303" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="36355:37917" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="37953:38341" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="38372:38952" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="38989:39379" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="39412:39997" ph="{...}" />
-                <marker date="1509141854000" expanded="false" signature="40037:40048" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="40097:40103" ph=" }" />
-                <marker date="1509141854000" expanded="true" signature="40152:40625" ph="{...}" />
-                <marker date="1509141854000" expanded="false" signature="40665:40676" ph=" { " />
-                <marker date="1509141854000" expanded="false" signature="40722:40728" ph=" }" />
-                <marker date="1509141854000" expanded="true" signature="40777:41567" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="41608:41996" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="42037:42668" ph="{...}" />
-                <marker date="1509141854000" expanded="true" signature="42697:42888" ph="{...}" />
+                <element signature="e#10699#10700#0" expanded="true" />
+                <element signature="e#10729#10730#0" expanded="true" />
+                <element signature="e#10830#10831#0" expanded="true" />
+                <element signature="e#10863#10864#0" expanded="true" />
+                <element signature="e#11515#11516#0" expanded="true" />
+                <element signature="e#11552#11553#0" expanded="true" />
+                <element signature="e#11687#11688#0" expanded="true" />
+                <element signature="e#11730#11731#0" expanded="true" />
+                <element signature="e#14690#14691#0" expanded="true" />
+                <element signature="e#14757#14758#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -379,10 +237,10 @@
         <option value="$PROJECT_DIR$/src/Model/RandomRoster.java" />
         <option value="$PROJECT_DIR$/src/Util/Staff.java" />
         <option value="$PROJECT_DIR$/src/Util/Shift/Shift.java" />
-        <option value="$PROJECT_DIR$/src/Model/RosterModel.java" />
         <option value="$PROJECT_DIR$/src/View/TextUIView.java" />
-        <option value="$PROJECT_DIR$/src/Controller/TextController.java" />
         <option value="$PROJECT_DIR$/src/Model/BasicRoster.java" />
+        <option value="$PROJECT_DIR$/src/Model/RosterModel.java" />
+        <option value="$PROJECT_DIR$/src/Controller/TextController.java" />
       </list>
     </option>
   </component>
@@ -407,7 +265,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -419,6 +276,12 @@
               <item name="RosterGenerator" type="b2602c69:ProjectViewProjectNode" />
               <item name="RosterGenerator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RosterGenerator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RosterGenerator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RosterGenerator" type="b2602c69:ProjectViewProjectNode" />
@@ -436,9 +299,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -686,15 +550,31 @@
       <option name="project" value="LOCAL" />
       <updated>1520605026060</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="All command bugs fixed">
+      <created>1520905131543</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1520905131543</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="229" y="160" width="2160" height="1395" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329806" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -706,7 +586,8 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3324515" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27555987" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28237584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329806" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24975657" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -718,7 +599,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329806" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -733,7 +613,8 @@
     <MESSAGE value="Fixed random generation, need to address shifts that start after they finish" />
     <MESSAGE value="Added text commands and a command line user interface" />
     <MESSAGE value="Added ls, add, remove, clear commands to the textUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ls, add, remove, clear commands to the textUI" />
+    <MESSAGE value="All command bugs fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="All command bugs fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -805,16 +686,16 @@
             <element signature="e#1043#1044#0" expanded="true" />
             <element signature="e#1073#1074#0" expanded="true" />
             <element signature="e#1107#1108#0" expanded="true" />
-            <element signature="e#4619#4620#0" expanded="true" />
-            <element signature="e#4651#4652#0" expanded="true" />
-            <element signature="e#4689#4690#0" expanded="true" />
-            <element signature="e#4718#4719#0" expanded="true" />
-            <element signature="e#4754#4755#0" expanded="true" />
-            <element signature="e#4787#4788#0" expanded="true" />
-            <element signature="e#4831#4832#0" expanded="true" />
-            <element signature="e#4885#4886#0" expanded="true" />
-            <element signature="e#5961#5962#0" expanded="true" />
-            <element signature="e#5989#5990#0" expanded="true" />
+            <element signature="e#6648#6649#0" expanded="true" />
+            <element signature="e#6680#6681#0" expanded="true" />
+            <element signature="e#6718#6719#0" expanded="true" />
+            <element signature="e#6747#6748#0" expanded="true" />
+            <element signature="e#6783#6784#0" expanded="true" />
+            <element signature="e#6816#6817#0" expanded="true" />
+            <element signature="e#6860#6861#0" expanded="true" />
+            <element signature="e#6914#6915#0" expanded="true" />
+            <element signature="e#7990#7991#0" expanded="true" />
+            <element signature="e#8018#8019#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -890,16 +771,16 @@
             <element signature="e#1043#1044#0" expanded="true" />
             <element signature="e#1073#1074#0" expanded="true" />
             <element signature="e#1107#1108#0" expanded="true" />
-            <element signature="e#4619#4620#0" expanded="true" />
-            <element signature="e#4651#4652#0" expanded="true" />
-            <element signature="e#4689#4690#0" expanded="true" />
-            <element signature="e#4718#4719#0" expanded="true" />
-            <element signature="e#4754#4755#0" expanded="true" />
-            <element signature="e#4787#4788#0" expanded="true" />
-            <element signature="e#4831#4832#0" expanded="true" />
-            <element signature="e#4885#4886#0" expanded="true" />
-            <element signature="e#5961#5962#0" expanded="true" />
-            <element signature="e#5989#5990#0" expanded="true" />
+            <element signature="e#6648#6649#0" expanded="true" />
+            <element signature="e#6680#6681#0" expanded="true" />
+            <element signature="e#6718#6719#0" expanded="true" />
+            <element signature="e#6747#6748#0" expanded="true" />
+            <element signature="e#6783#6784#0" expanded="true" />
+            <element signature="e#6816#6817#0" expanded="true" />
+            <element signature="e#6860#6861#0" expanded="true" />
+            <element signature="e#6914#6915#0" expanded="true" />
+            <element signature="e#7990#7991#0" expanded="true" />
+            <element signature="e#8018#8019#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -969,16 +850,16 @@
             <element signature="e#1043#1044#0" expanded="true" />
             <element signature="e#1073#1074#0" expanded="true" />
             <element signature="e#1107#1108#0" expanded="true" />
-            <element signature="e#4619#4620#0" expanded="true" />
-            <element signature="e#4651#4652#0" expanded="true" />
-            <element signature="e#4689#4690#0" expanded="true" />
-            <element signature="e#4718#4719#0" expanded="true" />
-            <element signature="e#4754#4755#0" expanded="true" />
-            <element signature="e#4787#4788#0" expanded="true" />
-            <element signature="e#4831#4832#0" expanded="true" />
-            <element signature="e#4885#4886#0" expanded="true" />
-            <element signature="e#5961#5962#0" expanded="true" />
-            <element signature="e#5989#5990#0" expanded="true" />
+            <element signature="e#6648#6649#0" expanded="true" />
+            <element signature="e#6680#6681#0" expanded="true" />
+            <element signature="e#6718#6719#0" expanded="true" />
+            <element signature="e#6747#6748#0" expanded="true" />
+            <element signature="e#6783#6784#0" expanded="true" />
+            <element signature="e#6816#6817#0" expanded="true" />
+            <element signature="e#6860#6861#0" expanded="true" />
+            <element signature="e#6914#6915#0" expanded="true" />
+            <element signature="e#7990#7991#0" expanded="true" />
+            <element signature="e#8018#8019#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1060,16 +941,16 @@
             <element signature="e#1043#1044#0" expanded="true" />
             <element signature="e#1073#1074#0" expanded="true" />
             <element signature="e#1107#1108#0" expanded="true" />
-            <element signature="e#4619#4620#0" expanded="true" />
-            <element signature="e#4651#4652#0" expanded="true" />
-            <element signature="e#4689#4690#0" expanded="true" />
-            <element signature="e#4718#4719#0" expanded="true" />
-            <element signature="e#4754#4755#0" expanded="true" />
-            <element signature="e#4787#4788#0" expanded="true" />
-            <element signature="e#4831#4832#0" expanded="true" />
-            <element signature="e#4885#4886#0" expanded="true" />
-            <element signature="e#5961#5962#0" expanded="true" />
-            <element signature="e#5989#5990#0" expanded="true" />
+            <element signature="e#6648#6649#0" expanded="true" />
+            <element signature="e#6680#6681#0" expanded="true" />
+            <element signature="e#6718#6719#0" expanded="true" />
+            <element signature="e#6747#6748#0" expanded="true" />
+            <element signature="e#6783#6784#0" expanded="true" />
+            <element signature="e#6816#6817#0" expanded="true" />
+            <element signature="e#6860#6861#0" expanded="true" />
+            <element signature="e#6914#6915#0" expanded="true" />
+            <element signature="e#7990#7991#0" expanded="true" />
+            <element signature="e#8018#8019#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1120,16 +1001,16 @@
             <element signature="e#1043#1044#0" expanded="true" />
             <element signature="e#1073#1074#0" expanded="true" />
             <element signature="e#1107#1108#0" expanded="true" />
-            <element signature="e#4619#4620#0" expanded="true" />
-            <element signature="e#4651#4652#0" expanded="true" />
-            <element signature="e#4689#4690#0" expanded="true" />
-            <element signature="e#4718#4719#0" expanded="true" />
-            <element signature="e#4754#4755#0" expanded="true" />
-            <element signature="e#4787#4788#0" expanded="true" />
-            <element signature="e#4831#4832#0" expanded="true" />
-            <element signature="e#4885#4886#0" expanded="true" />
-            <element signature="e#5961#5962#0" expanded="true" />
-            <element signature="e#5989#5990#0" expanded="true" />
+            <element signature="e#6648#6649#0" expanded="true" />
+            <element signature="e#6680#6681#0" expanded="true" />
+            <element signature="e#6718#6719#0" expanded="true" />
+            <element signature="e#6747#6748#0" expanded="true" />
+            <element signature="e#6783#6784#0" expanded="true" />
+            <element signature="e#6816#6817#0" expanded="true" />
+            <element signature="e#6860#6861#0" expanded="true" />
+            <element signature="e#6914#6915#0" expanded="true" />
+            <element signature="e#7990#7991#0" expanded="true" />
+            <element signature="e#8018#8019#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1201,13 +1082,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/CellBlock.java" />
     <entry file="file://$PROJECT_DIR$/src/View/Cell.java" />
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/ArrayList.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4901">
-          <caret line="191" column="0" lean-forward="false" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Util/Shift/ManagerShift.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -1465,36 +1339,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/RandomRoster.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1131">
+        <state relative-caret-position="0">
           <caret line="42" column="26" lean-forward="false" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/RosterModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4872">
-          <caret line="187" column="21" lean-forward="false" selection-start-line="187" selection-start-column="21" selection-end-line="187" selection-end-column="21" />
-          <folding>
-            <element signature="e#612#613#0" expanded="true" />
-            <element signature="e#650#651#0" expanded="true" />
-            <element signature="e#682#683#0" expanded="true" />
-            <element signature="e#718#719#0" expanded="true" />
-            <element signature="e#1007#1008#0" expanded="true" />
-            <element signature="e#1043#1044#0" expanded="true" />
-            <element signature="e#1073#1074#0" expanded="true" />
-            <element signature="e#1107#1108#0" expanded="true" />
-            <element signature="e#4619#4620#0" expanded="true" />
-            <element signature="e#4651#4652#0" expanded="true" />
-            <element signature="e#4689#4690#0" expanded="true" />
-            <element signature="e#4718#4719#0" expanded="true" />
-            <element signature="e#4754#4755#0" expanded="true" />
-            <element signature="e#4787#4788#0" expanded="true" />
-            <element signature="e#4831#4832#0" expanded="true" />
-            <element signature="e#4885#4886#0" expanded="true" />
-            <element signature="e#5961#5962#0" expanded="true" />
-            <element signature="e#5989#5990#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1511,32 +1358,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/TextController.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/BasicRoster.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="203" column="24" lean-forward="true" selection-start-line="203" selection-start-column="24" selection-end-line="203" selection-end-column="24" />
+        <state relative-caret-position="448">
+          <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#9821#9822#0" expanded="true" />
-            <element signature="e#9851#9852#0" expanded="true" />
-            <element signature="e#9952#9953#0" expanded="true" />
-            <element signature="e#9985#9986#0" expanded="true" />
-            <element signature="e#10637#10638#0" expanded="true" />
-            <element signature="e#10674#10675#0" expanded="true" />
-            <element signature="e#10809#10810#0" expanded="true" />
-            <element signature="e#10852#10853#0" expanded="true" />
-            <element signature="e#12964#12965#0" expanded="true" />
-            <element signature="e#13031#13032#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/BasicRoster.java">
+    <entry file="file://$PROJECT_DIR$/src/Controller/TextController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="38" column="42" lean-forward="true" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+        <state relative-caret-position="646">
+          <caret line="455" column="18" lean-forward="true" selection-start-line="455" selection-start-column="18" selection-end-line="455" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#10699#10700#0" expanded="true" />
+            <element signature="e#10729#10730#0" expanded="true" />
+            <element signature="e#10830#10831#0" expanded="true" />
+            <element signature="e#10863#10864#0" expanded="true" />
+            <element signature="e#11515#11516#0" expanded="true" />
+            <element signature="e#11552#11553#0" expanded="true" />
+            <element signature="e#11687#11688#0" expanded="true" />
+            <element signature="e#11730#11731#0" expanded="true" />
+            <element signature="e#14690#14691#0" expanded="true" />
+            <element signature="e#14757#14758#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/ArrayList.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="216" column="13" lean-forward="false" selection-start-line="216" selection-start-column="13" selection-end-line="216" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/RosterModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="652">
+          <caret line="186" column="36" lean-forward="true" selection-start-line="186" selection-start-column="36" selection-end-line="186" selection-end-column="36" />
+          <folding>
+            <element signature="e#612#613#0" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#682#683#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
+            <element signature="e#1043#1044#0" expanded="true" />
+            <element signature="e#1073#1074#0" expanded="true" />
+            <element signature="e#1107#1108#0" expanded="true" />
+            <element signature="e#6648#6649#0" expanded="true" />
+            <element signature="e#6680#6681#0" expanded="true" />
+            <element signature="e#6718#6719#0" expanded="true" />
+            <element signature="e#6747#6748#0" expanded="true" />
+            <element signature="e#6783#6784#0" expanded="true" />
+            <element signature="e#6816#6817#0" expanded="true" />
+            <element signature="e#6860#6861#0" expanded="true" />
+            <element signature="e#6914#6915#0" expanded="true" />
+            <element signature="e#7990#7991#0" expanded="true" />
+            <element signature="e#8018#8019#0" expanded="true" />
           </folding>
         </state>
       </provider>

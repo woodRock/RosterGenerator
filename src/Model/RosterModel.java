@@ -116,12 +116,22 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
     /**
      * This method returns a shift from the Roster based on
      * the staff member who may be working that day
-     * @param day to check for the staff member
+     * @param d to check for the staff member
      * @param name to find on the shifts of the day
      * @return the shift if it exists, false otherwise
      */
-    public Shift getShift(int day, String name){
-        for (Shift s: this.get(day)){
+    public Shift getShift(DAY_NAMES d, String name){
+        int dayNo = -1; // Throw errors if day isn't valid todo handle later
+        switch (d){
+            case MONDAY: dayNo = (0); break;
+            case TUESDAY: dayNo = (1); break;
+            case WEDNESDAY: dayNo = (2); break;
+            case THURSDAY: dayNo = (3); break;
+            case FRIDAY: dayNo = (4); break;
+            case SATURDAY: dayNo = (5); break;
+            case SUNDAY: dayNo = (6); break;
+        }
+        for (Shift s: this.get(dayNo)){
             if (s.equals(name))
                 return s;
         }
@@ -147,6 +157,60 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
         return shifts;
     }
 
+    /**
+     * This method swaps two individual shifts with eachother
+     * @param d1 first day to swap
+     * @param n1 name of the worker to swap
+     * @param d2 second day to be swapped with
+     * @param n2 name of the second worker to swap with the first
+     */
+    public boolean swapShift(DAY_NAMES d1, String n1, DAY_NAMES d2, String n2){
+        // This temp local variable is needed for the swap
+        Shift temp = null;
+        temp = getShift(d1, n1);
+
+        // Checks the if the first shift exists
+        if (temp == null)
+            return false;
+
+        int dayNo = getDayIndex(d1);
+        int idx = this.get(dayNo).indexOf(getShift(d1, n1));
+
+        this.get(dayNo).remove(idx);
+        this.get(dayNo).add(getShift(d2, n1));
+
+        int dayNo2 = getDayIndex(d2);
+        int idx2 = this.get(dayNo).indexOf(getShift(d2,n2));
+
+        this.get(dayNo).add(temp);
+        // Stores the second shift to be checked
+        temp = this.get(dayNo2).remove(idx2);
+
+        // Checks if the second shift exists
+        if (temp == null)
+            return false;
+        return true;
+    }
+
+    public int getDayIndex(DAY_NAMES d){
+        switch (d) {
+            case MONDAY:
+                return 0;
+            case TUESDAY:
+                return 1;
+            case WEDNESDAY:
+                return 2;
+            case THURSDAY:
+                return 3;
+            case FRIDAY:
+                return 4;
+            case SATURDAY:
+                return 5;
+            case SUNDAY:
+                return 6;
+        }
+        return -1; // todo handle errors
+    }
     /**
      * This method sets the difficulty of the model based
      * on a number
