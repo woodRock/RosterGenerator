@@ -81,6 +81,14 @@ public class Shift implements Comparable<Shift>{
         return this.endTime.toString();
     }
 
+    public void setStartTime(String time){
+        this.startTime = new Time(time);
+    }
+
+    public void setEndTime(String time){
+        this.endTime = new Time(time);
+    }
+
     public Staff getStaffMember(){
         return this.staffMember;
     }
