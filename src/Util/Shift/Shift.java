@@ -105,6 +105,13 @@ public class Shift implements Comparable<Shift>{
         return this.section;
     }
 
+    public void setSection(Staff.SECTION section){
+        this.section = section;
+    }
+
+    public void setStaff(Staff staff){
+        this.staffMember = staff;
+    }
     public RosterModel.DAY_NAMES getDay(){
         return this.day;
     }

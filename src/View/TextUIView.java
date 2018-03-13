@@ -94,7 +94,7 @@ public class TextUIView {
      * @param roster to be turned into text
      * @return the text representation
      */
-    public String addShiftRow(RosterModel roster, int m, int n){
+    public String addShiftRow(RosterModel roster, int dayNo, int n){
 
         String startSpace = "";
         String endSpace = "";
@@ -103,10 +103,10 @@ public class TextUIView {
         // Adds the start times for all of the shifts to the roster
         for (int i = 0; i< RosterModel.DAYS_IN_WEEK; i++) {
             // sorts the shifts for that day
-            roster.set(i, RosterModel.sortDay(roster.get(m)));
+            roster.set(i, RosterModel.sortDay(roster.get(dayNo)));
 
-            String startTime = roster.get(m).get(n).getStartTime();
-            int startTimeLength = roster.get(m).get(n).getStartTime().length();
+            String startTime = roster.get(dayNo).get(n).getStartTime();
+            int startTimeLength = roster.get(dayNo).get(n).getStartTime().length();
             if (startTimeLength == 5){
                 endSpace = "";
                 startSpace = "|";
@@ -129,7 +129,7 @@ public class TextUIView {
 
         // Loop adds the names for the shift to the roster
         for (int i = 0; i< RosterModel.DAYS_IN_WEEK; i++) {
-            String name = roster.get(m).get(n).getName();
+            String name = roster.get(dayNo).get(n).getName();
             if (name.length() > CELL_SPACING)
                 name = name.substring(0,CELL_SPACING);
             int nameLength = name.length();
@@ -161,8 +161,8 @@ public class TextUIView {
 
         // Loop adds the end times for shifts to the roster
         for (int i = 0; i< RosterModel.DAYS_IN_WEEK; i++) {
-            String endTime = roster.get(m).get(n).getEndTime();
-            int endTimeLength = roster.get(m).get(n).getEndTime().length();
+            String endTime = roster.get(dayNo).get(n).getEndTime();
+            int endTimeLength = roster.get(dayNo).get(n).getEndTime().length();
             if (endTimeLength == 5){
                 endSpace = "";
                 startSpace = "|";

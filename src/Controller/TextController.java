@@ -151,6 +151,8 @@ public class TextController {
                 sc.next();
             }
         }
+        // TODO: 3/14/18 Implement help functions for usage once all commands
+        // TODO: are finalized
     }
 
     /**

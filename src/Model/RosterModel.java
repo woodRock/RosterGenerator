@@ -143,12 +143,11 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
      * @param n2 name of the second worker to swap with the first
      */
     public boolean swapShift(DAY_NAMES d1, String n1, DAY_NAMES d2, String n2){
-        // TODO: 3/14/18 fix this (doesn't swap over days)
+        // TODO: 3/14/18 fix this (doesn't swap over days), and sections
         // This temp local variable is needed for the swap
         Shift s1 = getShift(d1, n1);
         Shift s2 = getShift(d2, n2);
-        String tempStart = s1.getStartTime();
-        String tempEnd = s1.getEndTime();
+        Staff tempStaff = s1.getStaffMember();
 
         // Checks the if the first shift exists
         int dayNo = getDayIndex(d1);
@@ -157,12 +156,9 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
         int dayNo2 = getDayIndex(d2);
         int idx2 = this.get(dayNo).indexOf(getShift(d2,n2));
 
-        this.get(dayNo).get(idx).setStartTime(s2.getStartTime());
-        this.get(dayNo).get(idx).setEndTime(s2.getEndTime());
-        this.get(dayNo2).get(idx2).setStartTime(tempStart);
-        this.get(dayNo2).get(idx2).setEndTime(tempEnd);
-
-
+        this.get(dayNo).get(idx).setStaff(s2.getStaffMember());
+        this.get(dayNo2).get(idx2).setStaff(tempStaff);
+        // TODO: 3/14/18 Make this check properly 
         return true;
     }
 
