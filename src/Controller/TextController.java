@@ -25,7 +25,7 @@ public class TextController {
     /**
      * Patterns for the inputs that are allowed in the user input
      */
-    private static final Pattern COMMAND = Pattern.compile("run|exit|print|rain|mode|clear|add|rm|ls|swap");
+    private static final Pattern COMMAND = Pattern.compile("run|exit|print|rain|mode|clear|add|rm|ls|swap|help");
 
     private static final Pattern BOOLEAN = Pattern.compile("on|off|true|false|0|1");
 

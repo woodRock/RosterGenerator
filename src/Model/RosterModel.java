@@ -2,8 +2,12 @@ package Model;
 
 import Util.Shift.Shift;
 import Util.Staff;
+import Util.Time;
+import com.sun.istack.internal.Nullable;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 /**
  *  This class captures the notion of an entire RosterModel.
@@ -82,6 +86,24 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
     }
 
     /**
+     * This method will sort the shifts for the day according
+     * to there start times, earlier ones first
+     * @param shifts the day to be sorted
+     * @return the sorted day
+     */
+    public static ArrayList<Shift> sortDay(ArrayList<Shift> shifts){
+        // Compares start times to each other
+        Comparator<Shift> comparator = new Comparator<Shift>() {
+            @Override
+            public int compare(Shift shift, Shift t1) {
+                return shift.compareTo(t1);
+            }
+        };
+        Collections.sort(shifts, comparator);
+        return shifts;
+    }
+
+    /**
      * This method sorts the roster by sections
      * @param section to be sorted into
      * @return only shifts from this section
@@ -114,50 +136,6 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
     }
 
     /**
-     * This method returns a shift from the Roster based on
-     * the staff member who may be working that day
-     * @param d to check for the staff member
-     * @param name to find on the shifts of the day
-     * @return the shift if it exists, false otherwise
-     */
-    public Shift getShift(DAY_NAMES d, String name){
-        int dayNo = -1; // Throw errors if day isn't valid todo handle later
-        switch (d){
-            case MONDAY: dayNo = (0); break;
-            case TUESDAY: dayNo = (1); break;
-            case WEDNESDAY: dayNo = (2); break;
-            case THURSDAY: dayNo = (3); break;
-            case FRIDAY: dayNo = (4); break;
-            case SATURDAY: dayNo = (5); break;
-            case SUNDAY: dayNo = (6); break;
-        }
-        for (Shift s: this.get(dayNo)){
-            if (s.equals(name))
-                return s;
-        }
-        return null;
-    }
-
-    /**
-     * This method returns all the shifts for a day
-     * @param d the day to get the shifts for
-     * @return shifts for that day
-     */
-    public ArrayList<Shift> getShifts(DAY_NAMES d){
-        ArrayList<Shift> shifts = new ArrayList<>();
-        switch (d){
-            case MONDAY: return this.get(0);
-            case TUESDAY: return this.get(1);
-            case WEDNESDAY: return this.get(2);
-            case THURSDAY: return this.get(3);
-            case FRIDAY: return this.get(4);
-            case SATURDAY: return this.get(5);
-            case SUNDAY: return this.get(6);
-        }
-        return shifts;
-    }
-
-    /**
      * This method swaps two individual shifts with eachother
      * @param d1 first day to swap
      * @param n1 name of the worker to swap
@@ -165,6 +143,7 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
      * @param n2 name of the second worker to swap with the first
      */
     public boolean swapShift(DAY_NAMES d1, String n1, DAY_NAMES d2, String n2){
+        // TODO: 3/14/18 fix this
         // This temp local variable is needed for the swap
         Shift temp = null;
         temp = getShift(d1, n1);
@@ -192,24 +171,28 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
         return true;
     }
 
-    public int getDayIndex(DAY_NAMES d){
-        switch (d) {
-            case MONDAY:
-                return 0;
-            case TUESDAY:
-                return 1;
-            case WEDNESDAY:
-                return 2;
-            case THURSDAY:
-                return 3;
-            case FRIDAY:
-                return 4;
-            case SATURDAY:
-                return 5;
-            case SUNDAY:
-                return 6;
+    /**
+     * This method returns a shift from the Roster based on
+     * the staff member who may be working that day
+     * @param d to check for the staff member
+     * @param name to find on the shifts of the day
+     * @return the shift if it exists, false otherwise
+     */
+    public Shift getShift(DAY_NAMES d, String name){
+        for (Shift s: this.get(d.getDay())){
+            if (s.equals(name))
+                return s;
         }
-        return -1; // todo handle errors
+        return null;
+    }
+
+    /**
+     * This method returns the index that responds to the daynames
+     * @param d name of the day
+     * @return the corresponding index; i.e., mon (1), tue (2)
+     */
+    public int getDayIndex(DAY_NAMES d){
+        return d.getDay();
     }
     /**
      * This method sets the difficulty of the model based
@@ -273,6 +256,19 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
 
     public ArrayList<Staff> getStaffList() {
         return staff;
+    }
+
+    /**
+     * This method returns all the shifts for a day
+     * @param d the day to get the shifts for
+     * @return shifts for that day
+     */
+    public ArrayList<Shift> getShifts(DAY_NAMES d){
+        return this.get(d.getDay());
+    }
+
+    public void setShifts(DAY_NAMES d, ArrayList<Shift> shifts){
+        this.set(d.getDay(), shifts);
     }
 
     public RosterModel(){}

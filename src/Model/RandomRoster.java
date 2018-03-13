@@ -17,8 +17,8 @@ public class RandomRoster extends RosterModel {
      * These are the start times, they will eventually be stored as a tuple linked to a
      * shift type, that will store the end time and the break time as well
      */
-    private String[] startTimes = {"9am", "10am", "11am", "12pm", "3pm", "4pm", "5pm"};
-    private String[] endTimes = {"3pm", "4pm", "5pm", "7pm", "9pm", "10pm", "TC"};
+    private String[] startTimes = {"0900", "1000", "1100", "1200", "1500", "1600", "1700"};
+    private String[] endTimes = {"1500", "1600", "1700", "1900", "1100", "2200", "2100"};
 
     /**
      *  The normal constructor for the Random Roster, eventually needs to read a file
@@ -64,10 +64,13 @@ public class RandomRoster extends RosterModel {
             test_Shifts.add(new Shift(s,randomStartTime, randomEndTime, randomSection));
         }
 
+        test_Shifts = sortDay(test_Shifts);
+
         // Adds each day of shifts at a time
         for (int i=0; i<DAYS_IN_WEEK; i++) {
             for (Shift s : test_Shifts)
                 this.get(i).add(s);
         }
+
     }
 }

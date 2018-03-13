@@ -2,18 +2,21 @@ package Util.Shift;
 
 import Model.RosterModel;
 import Util.Staff;
+import Util.Time;
 
 /**
  * This class captures the notion of an individual shift, it is a tuple and
  * a linked-list that stores the information required to make informed rosters
  */
-public class Shift {
+public class Shift implements Comparable<Shift>{
 
     /**
      * Stores the type of shift, as this changes what information
      * is required
      */
     public StrategyShift shiftType;
+
+    public RosterModel.DAY_NAMES day;
 
     /**
      * This stores the previous and next shift in a
@@ -31,19 +34,18 @@ public class Shift {
      * The times related that will be stored for any
      * type of shift
      */
-    private String startTime;
+    private Time startTime;
 
-    private String endTime;
+    private Time endTime;
 
     /**
      * Default constructor for a shift, not fully implemented yet
      */
     public Shift(Staff staff, String startTime, String endTime, Staff.SECTION section){
-        this.shiftType = new DayShift();
         this.staffMember = staff;
         this.section = section;
-        this.startTime = startTime;
-        this.endTime = endTime;
+        this.startTime = new Time(startTime);
+        this.endTime = new Time(endTime);
     }
 
     /**
@@ -72,11 +74,11 @@ public class Shift {
     }
 
     public String getStartTime(){
-        return this.startTime;
+        return this.startTime.toString();
     }
 
     public String getEndTime(){
-        return this.endTime;
+        return this.endTime.toString();
     }
 
     public Staff getStaffMember(){
@@ -92,10 +94,14 @@ public class Shift {
     }
 
     public Staff.SECTION getSection() {
-        return section;
+        return this.section;
     }
 
     public RosterModel.DAY_NAMES getDay(){
-        return RosterModel.DAY_NAMES.MONDAY;
+        return this.day;
+    }
+
+    public int compareTo(Shift other){
+        return this.startTime.compareTo(other.startTime);
     }
 }

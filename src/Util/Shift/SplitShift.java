@@ -7,7 +7,12 @@ package Util.Shift;
  */
 public class SplitShift implements StrategyShift {
 
-    public String splitStartTime;
-
-    public String splitEndTime;
+    /**
+     * Stores the start and end time for the split shift;
+     * this is when the staff member is rostered on for
+     * their 1 hour break, this may vary depending on how
+     * busy it is that day
+     */
+    public String splitStart;
+    public String splitEnd;
 }

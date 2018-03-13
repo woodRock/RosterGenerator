@@ -102,6 +102,9 @@ public class TextUIView {
 
         // Adds the start times for all of the shifts to the roster
         for (int i = 0; i< RosterModel.DAYS_IN_WEEK; i++) {
+            // sorts the shifts for that day
+            roster.set(i, RosterModel.sortDay(roster.get(m)));
+
             String startTime = roster.get(m).get(n).getStartTime();
             int startTimeLength = roster.get(m).get(n).getStartTime().length();
             if (startTimeLength == 5){
