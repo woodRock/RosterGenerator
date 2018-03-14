@@ -93,13 +93,13 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
      */
     public static ArrayList<Shift> sortDay(ArrayList<Shift> shifts){
         // Compares start times to each other
-        Comparator<Shift> comparator = new Comparator<Shift>() {
+        Comparator<Shift> TIME = new Comparator<Shift>() {
             @Override
             public int compare(Shift shift, Shift t1) {
                 return shift.compareTo(t1);
             }
         };
-        Collections.sort(shifts, comparator);
+        Collections.sort(shifts, TIME);
         return shifts;
     }
 
@@ -109,16 +109,13 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
      * @return only shifts from this section
      */
     public RosterModel getRosterSection(Staff.SECTION section){
-        /**
-         * This ia the output roster that comprises of only shifts
-         * that belong to the section parameter
-         */
+
+     // This ia the output roster that comprises of only shifts
+     // that belong to the section parameter
         RosterModel output = new RosterModel(date);
 
-        /**
-         * This nested loop traverses the roster and isolates the
-         * desired shifts that belong to the corresponding section
-         */
+     // This nested loop traverses the roster and isolates the
+     // desired shifts that belong to the corresponding section
         for (int col=0; col<DAYS_IN_WEEK; col++){ // Iterates through the columns (days)
             ArrayList<Shift> shiftList = this.get(col);
             for (Shift s: shiftList){
@@ -127,11 +124,8 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
                     output.get(col).add(s); // Add this shift to the collection
             }
         }
-
-        /**
-         * This is the completed RosterModel which only contains the section
-         * specified by the parameters
-         */
+         // This is the completed RosterModel which only contains the section
+         // specified by the parameters
         return output;
     }
 
@@ -162,13 +156,6 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
         return true;
     }
 
-    /**
-     * This method returns a shift from the Roster based on
-     * the staff member who may be working that day
-     * @param d to check for the staff member
-     * @param name to find on the shifts of the day
-     * @return the shift if it exists, false otherwise
-     */
     public Shift getShift(DAY_NAMES d, String name){
         for (Shift s: this.get(d.getDay())){
             if (s.equals(name))
@@ -177,19 +164,10 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
         return null;
     }
 
-    /**
-     * This method returns the index that responds to the daynames
-     * @param d name of the day
-     * @return the corresponding index; i.e., mon (1), tue (2)
-     */
     public int getDayIndex(DAY_NAMES d){
         return d.getDay();
     }
-    /**
-     * This method sets the difficulty of the model based
-     * on a number
-     * @param i level of difficulty
-     */
+
     public void setDifficulty(int i) {
         for (Difficulty d : Difficulty.values()) {
             if (d.getLevel() == i)
@@ -249,11 +227,6 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
         return staff;
     }
 
-    /**
-     * This method returns all the shifts for a day
-     * @param d the day to get the shifts for
-     * @return shifts for that day
-     */
     public ArrayList<Shift> getShifts(DAY_NAMES d){
         return this.get(d.getDay());
     }

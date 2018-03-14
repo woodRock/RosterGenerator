@@ -11,6 +11,7 @@ public class Time implements Comparable<Time>{
      */
     private String time;
 
+
     /**
      * Stores it in 24 hour format to avoid confusion
      * between the morning and night
@@ -38,7 +39,7 @@ public class Time implements Comparable<Time>{
             if (c2 > c1)
                 return -1;
         }
-        // Times must be equal to eachother
+        // Times must be equal to each other
         return 0;
     }
 
