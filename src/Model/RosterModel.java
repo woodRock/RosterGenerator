@@ -14,7 +14,7 @@ import java.util.Comparator;
  *  It is comprised of several smaller lightweight classes
  *  that combine to represent a roster.
  */
-public class RosterModel extends ArrayList<ArrayList<Shift>>{
+public abstract class RosterModel extends ArrayList<ArrayList<Shift>>{
 
     /**
      * This enum was create to store the busyness of a shift
@@ -110,18 +110,18 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
      */
     public RosterModel getRosterSection(Staff.SECTION section){
 
-     // This ia the output roster that comprises of only shifts
-     // that belong to the section parameter
-        RosterModel output = new RosterModel(date);
+         // This is the output roster that comprises of only shifts
+         // that belong to the section parameter
+        RosterModel output = new BasicRoster(date);
 
      // This nested loop traverses the roster and isolates the
      // desired shifts that belong to the corresponding section
-        for (int col=0; col<DAYS_IN_WEEK; col++){ // Iterates through the columns (days)
-            ArrayList<Shift> shiftList = this.get(col);
+        for (int day=0; day<DAYS_IN_WEEK; day++){ // Iterates through the columns (days)
+            ArrayList<Shift> shiftList = this.get(day);
             for (Shift s: shiftList){
                 // If this shift corresponds to the correct section
                 if (s.getSection().equals(section))
-                    output.get(col).add(s); // Add this shift to the collection
+                    output.get(day).add(s); // Add this shift to the collection
             }
         }
          // This is the completed RosterModel which only contains the section
@@ -234,6 +234,4 @@ public class RosterModel extends ArrayList<ArrayList<Shift>>{
     public void setShifts(DAY_NAMES d, ArrayList<Shift> shifts){
         this.set(d.getDay(), shifts);
     }
-
-    public RosterModel(){}
 }

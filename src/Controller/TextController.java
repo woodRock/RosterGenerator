@@ -20,7 +20,7 @@ public class TextController {
 
     private TextUIView view;
 
-    private RandomRoster model;
+    private RosterModel model;
 
     /**
      * Patterns for the inputs that are allowed in the user input
@@ -61,7 +61,7 @@ public class TextController {
      * @param model
      * @param view
      */
-    public TextController(RandomRoster model, TextUIView view){
+    public TextController(RosterModel model, TextUIView view){
         this.model = model;
         this.view = view;
         readTextInput();

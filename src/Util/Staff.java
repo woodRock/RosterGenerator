@@ -34,8 +34,6 @@ public class Staff {
 
     private String name;
 
-    private ArrayList<SKILL> skills = new ArrayList<>();
-
     private ArrayList<SECTION> sections = new ArrayList<>();
 
     private ArrayList<RosterModel.DAY_NAMES> daysCantWork = new ArrayList<>();
@@ -85,11 +83,10 @@ public class Staff {
         return false;
     }
 
-    /**
-     * This method adds a day that a staff member can't work to the
-     * staff class, such that it can be stored
-     * @param day
-     */
+    public int getShiftCount(){
+        return this.shiftCount;
+    }
+
     public void addDayCantWork(RosterModel.DAY_NAMES day){
         daysCantWork.add(day);
     }

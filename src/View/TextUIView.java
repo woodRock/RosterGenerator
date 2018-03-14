@@ -8,13 +8,17 @@ import Util.Staff;
  */
 public class TextUIView {
 
-    private RosterModel roster;
+    private final static String HORIZONTAL_CELL_BORDER = "|";
 
-    private String rosterText;
+    private final static String VERTICAL_CELL_BORDER = "-";
 
     private final static int ROSTER_CHARACTER_WIDTH = 41;
 
     private final static int CELL_SPACING = 5;
+
+    private RosterModel roster;
+
+    private String rosterText;
 
     /**
      * The default constructor for the text representation
@@ -24,13 +28,6 @@ public class TextUIView {
     public TextUIView(RosterModel roster){
         this.roster = roster;
         this.rosterText = buildRoster(roster);
-    }
-
-    /**
-     * Displays the text representation of the roster to the user
-     */
-    public void print(){
-        System.out.print(rosterText);
     }
 
     /**
@@ -57,9 +54,13 @@ public class TextUIView {
                     sectionShiftMax  = sectionShifts.get(i).size();
                 }
             }
+            if (sectionShifts.size() == 0){
+                continue;
+            }
             output += getTitle(s.toString());
             // Adds these shifts to the output
             for (int i = 0; i<sectionShiftMax; i++){
+                // TODO: 3/15/18 Change this dayNo 
                 output += addShiftRow(sectionShifts, 0, i);
                 output += addLine();
             }
@@ -82,7 +83,7 @@ public class TextUIView {
             // Calculates the center of the roster
             if (i == (ROSTER_CHARACTER_WIDTH - (titleText.length()+titlePadding)) /2)
                 output += "[" + titleText + "]"; // Adds the border
-            output += "-";
+            output += VERTICAL_CELL_BORDER;
         }
         output += "\n";
         return output;
@@ -95,9 +96,6 @@ public class TextUIView {
      * @return the text representation
      */
     public String addShiftRow(RosterModel roster, int dayNo, int n){
-
-        String startSpace = "";
-        String endSpace = "";
         String output = "";
 
         // sorts the shifts for that days
@@ -107,20 +105,17 @@ public class TextUIView {
 
         // Adds the start times for all of the shifts to the roster
         for (int i = 0; i< RosterModel.DAYS_IN_WEEK; i++) {
-
-
             String startTime = roster.get(dayNo).get(n).getStartTime();
             output += formatSpacingText(startTime, i==0);
         }
-
-        output += "|\n";
+        output += HORIZONTAL_CELL_BORDER + "\n";
 
         // Loop adds the names for the shift to the roster
         for (int i = 0; i< RosterModel.DAYS_IN_WEEK; i++) {
             String name = roster.get(dayNo).get(n).getName();
             output += formatSpacingText(name, i==0);
         }
-        output += "|\n";
+        output += HORIZONTAL_CELL_BORDER + "\n";
 
 
         // Loop adds the end times for shifts to the roster
@@ -128,12 +123,19 @@ public class TextUIView {
             String endTime = roster.get(dayNo).get(n).getEndTime();
             output += formatSpacingText(endTime, i==0);
         }
-        output += "|\n";
+        output += HORIZONTAL_CELL_BORDER + "\n";
 
         // Returns the completed shift row ready for presentation
         return output;
     }
 
+    /**
+     * This method formats the text for a line on the text representation
+     * of the roster
+     * @param text to be printed
+     * @param first is it on the first column?
+     * @return the formatted text
+     */
     public String formatSpacingText(String text, boolean first){
         String startSpace = "";
         String endSpace = "";
@@ -142,24 +144,24 @@ public class TextUIView {
         int textLength = text.length();
         if (textLength == 5){
             endSpace = "";
-            startSpace = "|";
+            startSpace = HORIZONTAL_CELL_BORDER;
         }
         if (textLength == 4){
-            startSpace = "|";
+            startSpace = HORIZONTAL_CELL_BORDER;
             endSpace = " ";
         }
         if (textLength == 3){
-            startSpace = "| ";
+            startSpace = HORIZONTAL_CELL_BORDER + " ";
             endSpace = " ";
         }
         if (textLength == 2){
-            startSpace = "| ";
+            startSpace = HORIZONTAL_CELL_BORDER + " ";
             endSpace = "  ";
         }
         if (first){
-            startSpace = "|";
+            startSpace = HORIZONTAL_CELL_BORDER;
             if (textLength == 2)
-                startSpace = "| ";
+                startSpace = HORIZONTAL_CELL_BORDER + " ";
         }
         return startSpace + text + endSpace;
     }
@@ -181,14 +183,15 @@ public class TextUIView {
         int i = 0;
         for (RosterModel.DAY_NAMES d: RosterModel.DAY_NAMES.values()){
             if (i!=0)
-                space = " | ";
+                space = " "+ HORIZONTAL_CELL_BORDER + " ";
             else
-                space = "| ";
+                space = HORIZONTAL_CELL_BORDER + " ";
             output += space + d.toString().substring(0,dayStringLength);
             i++;
 
         }
-        output += " |\n";
+        output += " " + HORIZONTAL_CELL_BORDER +"\n";
+
         return output;
     }
 
@@ -200,9 +203,10 @@ public class TextUIView {
         String output = "";
         // Loop add a Line underneath the day titles
         for (int i = 0; i< RosterModel.DAYS_IN_WEEK; i++) {
-            output += "------";
+            for (int n=0; n<6; n++)
+                output += VERTICAL_CELL_BORDER;
         }
-        output += "-\n";
+        output += VERTICAL_CELL_BORDER + "\n";
         return output;
     }
 
@@ -213,4 +217,13 @@ public class TextUIView {
     public void update(){
         this.rosterText = buildRoster(this.roster);
     }
+
+    /**
+     * Displays the text representation of the roster to the user
+     */
+    public void print(){
+        this.rosterText = buildRoster(this.roster);
+        System.out.print(rosterText);
+    }
+
 }
