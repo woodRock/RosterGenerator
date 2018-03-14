@@ -41,8 +41,6 @@ public class RandomRoster extends RosterModel {
         ArrayList<Shift> test_Shifts = new ArrayList<>();
 
         for (Staff s: staff){
-            String randomStartTime = startTimes[(int)(Math.random()*(startTimes.length))];
-            String randomEndTime = endTimes[(int)(Math.random()*(endTimes.length))];
             Staff.SECTION randomSection = null;
 
             // Finds a random section for a staff member
@@ -61,7 +59,10 @@ public class RandomRoster extends RosterModel {
             if (randomSection == null)
                 randomSection = Staff.SECTION.OUTSIDE;
 
-            test_Shifts.add(new Shift(s,randomStartTime, randomEndTime, randomSection));
+            int rndStart = (int)(Math.random()*(startTimes.length));
+            int rndEnd = (int)(Math.random()*(endTimes.length));
+
+            test_Shifts.add(new Shift(s,startTimes[rndStart], endTimes[rndEnd], randomSection));
         }
 
         test_Shifts = sortDay(test_Shifts);

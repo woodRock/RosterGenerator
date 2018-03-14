@@ -86,6 +86,8 @@ public class TextController {
      * @param sc user command to be interpreted
      */
     public void parseInput(Scanner sc) {
+        if (!sc.hasNext())
+            return;
         if (!sc.hasNext(COMMAND))
             displayError(COMMAND_EXCEPTION_MSG);
 
@@ -282,10 +284,7 @@ public class TextController {
         String in = sc.next();
 
         // Checks all the true cases, if its not these it must be false
-        if (in.equals("on") || in.equals("true") || in.equals("1"))
-            return true;
-        else
-            return false;
+        return in.equals("on") || in.equals("true") || in.equals("1");
     }
 
     /**

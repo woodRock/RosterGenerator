@@ -55,10 +55,10 @@ public class TextUIView {
                 }
             }
             if (sectionShifts.size() == 0){
-                continue;
+                continue; // Doesn't add attempt to print empty sections
             }
             output += getTitle(s.toString());
-            // Adds these shifts to the output
+
             for (int i = 0; i<sectionShiftMax; i++){
                 // TODO: 3/15/18 Change this dayNo 
                 output += addShiftRow(sectionShifts, 0, i);
@@ -188,7 +188,6 @@ public class TextUIView {
                 space = HORIZONTAL_CELL_BORDER + " ";
             output += space + d.toString().substring(0,dayStringLength);
             i++;
-
         }
         output += " " + HORIZONTAL_CELL_BORDER +"\n";
 

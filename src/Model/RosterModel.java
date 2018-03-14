@@ -20,7 +20,6 @@ public abstract class RosterModel extends ArrayList<ArrayList<Shift>>{
      * This enum was create to store the busyness of a shift
      */
     public enum Difficulty {
-        // Levels of difficulty in ascending order of busyness
         DEAD (0), EASY (1), MEDIUM (2), HARD (3), INSANE (4);
 
         private final int level;
@@ -110,22 +109,14 @@ public abstract class RosterModel extends ArrayList<ArrayList<Shift>>{
      */
     public RosterModel getRosterSection(Staff.SECTION section){
 
-         // This is the output roster that comprises of only shifts
-         // that belong to the section parameter
         RosterModel output = new BasicRoster(date);
 
-     // This nested loop traverses the roster and isolates the
-     // desired shifts that belong to the corresponding section
-        for (int day=0; day<DAYS_IN_WEEK; day++){ // Iterates through the columns (days)
+        for (int day=0; day<DAYS_IN_WEEK; day++){
             ArrayList<Shift> shiftList = this.get(day);
             for (Shift s: shiftList){
-                // If this shift corresponds to the correct section
-                if (s.getSection().equals(section))
-                    output.get(day).add(s); // Add this shift to the collection
+                if (s.getSection().equals(section));
             }
         }
-         // This is the completed RosterModel which only contains the section
-         // specified by the parameters
         return output;
     }
 
