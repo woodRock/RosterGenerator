@@ -100,29 +100,17 @@ public class TextUIView {
         String endSpace = "";
         String output = "";
 
+        // sorts the shifts for that days
+        for (int i = 0; i< RosterModel.DAYS_IN_WEEK; i++) {
+            this.roster.set(i, RosterModel.sortDay(this.roster.get(i)));
+        }
+
         // Adds the start times for all of the shifts to the roster
         for (int i = 0; i< RosterModel.DAYS_IN_WEEK; i++) {
-            // sorts the shifts for that day
-            roster.set(i, RosterModel.sortDay(roster.get(dayNo)));
+
 
             String startTime = roster.get(dayNo).get(n).getStartTime();
-            int startTimeLength = roster.get(dayNo).get(n).getStartTime().length();
-            if (startTimeLength == 5){
-                endSpace = "";
-                startSpace = "|";
-            }
-            if (startTimeLength == 4){
-                startSpace = "| ";
-                endSpace = "";
-            }
-            if (startTimeLength == 3){
-                startSpace = "| ";
-                endSpace = " ";
-            }
-            if (i == 0){
-                startSpace = "| ";
-            }
-            output += startSpace + startTime + endSpace;
+            output += formatSpacingText(startTime, i==0);
         }
 
         output += "|\n";
@@ -130,64 +118,50 @@ public class TextUIView {
         // Loop adds the names for the shift to the roster
         for (int i = 0; i< RosterModel.DAYS_IN_WEEK; i++) {
             String name = roster.get(dayNo).get(n).getName();
-            if (name.length() > CELL_SPACING)
-                name = name.substring(0,CELL_SPACING);
-            int nameLength = name.length();
-            if (nameLength == 5){
-                endSpace = "";
-                startSpace = "|";
-            }
-            if (nameLength == 4){
-                startSpace = "|";
-                endSpace = " ";
-            }
-            if (nameLength == 3){
-                startSpace = "| ";
-                endSpace = " ";
-            }
-            if (nameLength == 2){
-                startSpace = "| ";
-                endSpace = "  ";
-            }
-            if (i == 0){
-                startSpace = "|";
-                if (nameLength == 2)
-                    startSpace = "| ";
-            }
-            output += startSpace +  name + endSpace;
+            output += formatSpacingText(name, i==0);
         }
         output += "|\n";
 
 
         // Loop adds the end times for shifts to the roster
-        for (int i = 0; i< RosterModel.DAYS_IN_WEEK; i++) {
+        for (int i=0; i< RosterModel.DAYS_IN_WEEK; i++) {
             String endTime = roster.get(dayNo).get(n).getEndTime();
-            int endTimeLength = roster.get(dayNo).get(n).getEndTime().length();
-            if (endTimeLength == 5){
-                endSpace = "";
-                startSpace = "|";
-            }
-            if (endTimeLength == 4){
-                startSpace = "| ";
-                endSpace = "";
-            }
-            if (endTimeLength == 3){
-                startSpace = "| ";
-                endSpace = " ";
-            }
-            if (endTimeLength == 2){
-                startSpace = "| ";
-                endSpace = "  ";
-            }
-            if (i == 0){
-                startSpace = "| ";
-            }
-            output += startSpace + endTime + endSpace;
+            output += formatSpacingText(endTime, i==0);
         }
         output += "|\n";
 
         // Returns the completed shift row ready for presentation
         return output;
+    }
+
+    public String formatSpacingText(String text, boolean first){
+        String startSpace = "";
+        String endSpace = "";
+        if (text.length() > CELL_SPACING)
+            text = text.substring(0,CELL_SPACING);
+        int textLength = text.length();
+        if (textLength == 5){
+            endSpace = "";
+            startSpace = "|";
+        }
+        if (textLength == 4){
+            startSpace = "|";
+            endSpace = " ";
+        }
+        if (textLength == 3){
+            startSpace = "| ";
+            endSpace = " ";
+        }
+        if (textLength == 2){
+            startSpace = "| ";
+            endSpace = "  ";
+        }
+        if (first){
+            startSpace = "|";
+            if (textLength == 2)
+                startSpace = "| ";
+        }
+        return startSpace + text + endSpace;
     }
 
     /**
