@@ -6,6 +6,7 @@ import Util.Shift.Shift;
 import Util.Staff;
 import View.TextUIView;
 
+import java.util.HashMap;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -56,6 +57,11 @@ public class TextController {
             "Invalid Day!\nUsage: <command> <object> <day>\n<day>: mon\t tues\t wed\t thurs\t fri\t Sat\t Sun\t";
 
     /**
+     * This maps the commands to the method calls they respond to
+     */
+    private static final HashMap<String, MethodArgumentComposite> commandsToMethodCalls = new HashMap<>();
+
+    /**
      * Default constructor for TextController designed to
      * help handle text input COMMAND from the user
      * @param model
@@ -71,7 +77,7 @@ public class TextController {
      * This method reads the text input from the user
      * using the System.in command line
      */
-    public void readTextInput(){
+    private void readTextInput(){
         System.out.print(TERMINAL_NAME + ": ");
         Scanner sc = new Scanner(System.in);
         while(sc.hasNextLine()) {
@@ -85,7 +91,7 @@ public class TextController {
      * on the model/view
      * @param sc user command to be interpreted
      */
-    public void parseInput(Scanner sc) {
+    private void parseInput(Scanner sc) {
         try {
             validPattern(COMMAND, COMMAND_EXCEPTION_MSG, sc);
         } catch (Exception e) {
@@ -93,7 +99,6 @@ public class TextController {
         }
 
         String in = sc.next();
-
         if (in.equals("exit"))
             close(sc);
 
@@ -164,7 +169,7 @@ public class TextController {
      * @param sc scanner to read input from
      * @throws Exception if it is an invalid input
      */
-    public void parseAdd(Scanner sc) throws Exception{
+    private void parseAdd(Scanner sc) throws Exception{
         validPattern(OBJECTS, OBJECT_ERROR_MSG, sc);
         String in = sc.next();
         if (in.equals("staff"))
@@ -180,7 +185,7 @@ public class TextController {
      * @param sc scanner to read from
      * @throws Exception if the input is invalid
      */
-    public void parseRemove(Scanner sc) throws Exception{
+    private void parseRemove(Scanner sc) throws Exception{
         validPattern(OBJECTS, OBJECT_ERROR_MSG, sc);
         String in = sc.next();
         if (in.equals("staff")){
@@ -198,7 +203,7 @@ public class TextController {
      * @param sc scanner to read the input from
      * @throws Exception if there is an invalid input
      */
-    public void parseList(Scanner sc) throws Exception {
+    private void parseList(Scanner sc) throws Exception {
         validPattern(OBJECTS, OBJECT_ERROR_MSG, sc);
         String in = sc.next();
         if (in.equals("staff"))
@@ -212,7 +217,7 @@ public class TextController {
      * @param sc scanner to read the input from
      * @throws Exception if the user input is invalid
      */
-    public void parseSwap(Scanner sc) throws Exception {
+    private void parseSwap(Scanner sc) throws Exception {
         validPattern(OBJECTS, OBJECT_ERROR_MSG, sc);
         String in = sc.next();
         if (in.equals("shift")){
@@ -230,7 +235,7 @@ public class TextController {
      * @return the day that was read, or null if non existent
      * @throws Exception if there was an invalid input
      */
-    public RosterModel.DAY_NAMES parseDay(Scanner sc) throws Exception{
+    private RosterModel.DAY_NAMES parseDay(Scanner sc) throws Exception{
         validPattern(DAYS, DAY_ERROR_MSG, sc);
         String in = sc.next();
         switch (in){
@@ -252,7 +257,7 @@ public class TextController {
      * @return the intended boolean
      * @throws Exception if invalid input
      */
-    public boolean parseBoolean(Scanner sc) throws Exception {
+    private boolean parseBoolean(Scanner sc) throws Exception {
         validPattern(BOOLEAN, BOOLEAN_EXCEPTION_MSG, sc);
         String in = sc.next();
 
@@ -266,7 +271,7 @@ public class TextController {
      * @return the integer if it exists
      * @throws Exception if the input is invalid
      */
-    public int parseInteger(Scanner sc) throws Exception {
+    private int parseInteger(Scanner sc) throws Exception {
         validPattern(INTEGER, INTEGER_EXCEPTION_MSG, sc);
         String in = sc.next();
         return Integer.parseInt(in);
@@ -279,7 +284,7 @@ public class TextController {
      * @return the users string input if valid
      * @throws Exception if an invalid inputs
      */
-    public String parseString(Scanner sc) throws Exception{
+    private String parseString(Scanner sc) throws Exception{
         validPattern(LETTERS, WORD_EXCEPTION_MSG, sc);
         return sc.next();
     }
@@ -292,7 +297,7 @@ public class TextController {
      * @return true if they match, false/error otherwise
      * @throws Exception if the pattern does not match or the scanner is empty
      */
-    public boolean validPattern(Pattern patternToMatch, String errorMessage,Scanner userInput) throws Exception {
+    private boolean validPattern(Pattern patternToMatch, String errorMessage,Scanner userInput) throws Exception {
         if (!userInput.hasNext())
             throw new Exception("Scanner is empty!\n");
         boolean isValid = userInput.hasNext(patternToMatch);
@@ -306,21 +311,21 @@ public class TextController {
      * deals with some of the errors that could crop up
      * @param sc the scanner to close
      */
-    public void close(Scanner sc){
+    private static void close(Scanner sc){
         System.exit(0);
     }
 
     /**
      * Displays the roster to the user on the command line
      */
-    public void print(){
+    private void print(){
         this.view.print();
     }
 
     /**
      * Creates a new version of the roster
      */
-    public void run(){
+    private void run(){
         this.model = new RandomRoster(model.getDate());
         this.view = new TextUIView(this.model);
     }
@@ -328,7 +333,7 @@ public class TextController {
     /**
      * Clears the text user interface for text
      */
-    public void clear(){
+    private void clear(){
        // System.out.println(new String(new char[50]).replace("\0", "\r\n"));
         for(int i = 0; i < 80*300; i++) // Default Height of cmd is 300 and Default width is 80
             System.out.print("\b"); // Prints a backspace
@@ -337,7 +342,7 @@ public class TextController {
      * Changes the rain on the roster model
      * @param b is it raining (T/F)
      */
-    public void setRain(boolean b){
+    private void setRain(boolean b){
         this.model.setRain(b);
     }
 
@@ -345,7 +350,7 @@ public class TextController {
      * This method changes the business of the shift
      * @param i Difficulty level
      */
-    public void setMode(int i){
+    private void setMode(int i){
         this.model.setDifficulty(i);
     }
 
@@ -355,7 +360,7 @@ public class TextController {
      * @param name of the new staff member
      * @param isDm is a duty manager?
      */
-    public void addStaff(String name, Boolean isDm){
+    private void addStaff(String name, Boolean isDm){
         this.model.addStaff(new Staff(name, isDm));
         this.view.update();
     }
@@ -365,7 +370,7 @@ public class TextController {
      * in the case where someone cannot work this week
      * @param name of the staff member to be removed
      */
-    public boolean removeStaff(String name){
+    private boolean removeStaff(String name){
         boolean b = this.model.removeStaff(name);
         if (b)
             this.view.update();
@@ -376,7 +381,7 @@ public class TextController {
      * This method displays all the current staff on the roster to
      * the user, so that they know who will be rostered for that week
      */
-    public void listStaff(){
+    private void listStaff(){
         for (Staff s: this.model.getStaffList()){
             System.out.print(s.getName() + "\n");
         }
@@ -387,7 +392,7 @@ public class TextController {
      * This method lists all of the shifts
      * @param d the given day
      */
-    public void listShift(RosterModel.DAY_NAMES d){
+    private void listShift(RosterModel.DAY_NAMES d){
         for (Shift s: this.model.getShifts(d)){
             System.out.print(s.toString());
         }
@@ -401,7 +406,7 @@ public class TextController {
      * @param end the time the shift ends
      * @param section the section of the shift
      */
-    public void addShift(RosterModel.DAY_NAMES d, String name, String start, String end, String section){
+    private void addShift(RosterModel.DAY_NAMES d, String name, String start, String end, String section){
         this.model.addShift(d, name, start, end, section);
         this.view.update();
     }
@@ -412,7 +417,7 @@ public class TextController {
      * @param name of the staff member who will no longer work
      * @return true if successful, false otherwise
      */
-    public boolean removeShift(RosterModel.DAY_NAMES d, String name){
+    private boolean removeShift(RosterModel.DAY_NAMES d, String name){
         boolean b = this.model.removeShift(d, name);
         if (b)
             this.view.update();
@@ -427,7 +432,7 @@ public class TextController {
      * @param n2 name of the second staff member
      * @return true if swap was successful, false otherwise
      */
-    public boolean swapShift(
+    private boolean swapShift(
             RosterModel.DAY_NAMES d1, String n1, RosterModel.DAY_NAMES d2, String n2){
             boolean b = this.model.swapShift(d1, n1, d2, n2);
             if (b)
@@ -440,7 +445,7 @@ public class TextController {
      * on the command line interface
      * @param errorMsg to be displayed
      */
-    public void displayError(String errorMsg){
+    private void displayError(String errorMsg){
         System.err.print(TEXT_INPUT_ERROR_PREFACE+errorMsg);
     }
 }
