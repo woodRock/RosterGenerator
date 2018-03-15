@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
  */
 public class TextController {
 
-    private String terminalName = "rg2000";
+    private final static String TERMINAL_NAME = "rg2000";
 
     private TextUIView view;
 
@@ -72,11 +72,11 @@ public class TextController {
      * using the System.in command line
      */
     public void readTextInput(){
-        System.out.print(terminalName + ": ");
+        System.out.print(TERMINAL_NAME + ": ");
         Scanner sc = new Scanner(System.in);
         while(sc.hasNextLine()) {
             parseInput(sc);
-            System.out.print(terminalName + ": ");
+            System.out.print(TERMINAL_NAME + ": ");
         }
     }
 
@@ -86,10 +86,11 @@ public class TextController {
      * @param sc user command to be interpreted
      */
     public void parseInput(Scanner sc) {
-        if (!sc.hasNext())
-            return;
-        if (!sc.hasNext(COMMAND))
-            displayError(COMMAND_EXCEPTION_MSG);
+        try {
+            validPattern(COMMAND, COMMAND_EXCEPTION_MSG, sc);
+        } catch (Exception e) {
+            displayError(e.getMessage());
+        }
 
         String in = sc.next();
 
@@ -164,11 +165,7 @@ public class TextController {
      * @throws Exception if it is an invalid input
      */
     public void parseAdd(Scanner sc) throws Exception{
-        // Scanner is empty
-        if (!sc.hasNext())
-            throw new Exception("Scanner is empty!\n");
-        if (!sc.hasNext(OBJECTS))
-            throw new Exception(OBJECT_ERROR_MSG);
+        validPattern(OBJECTS, OBJECT_ERROR_MSG, sc);
         String in = sc.next();
         if (in.equals("staff"))
             addStaff(parseString(sc), parseBoolean(sc));
@@ -184,12 +181,7 @@ public class TextController {
      * @throws Exception if the input is invalid
      */
     public void parseRemove(Scanner sc) throws Exception{
-        // Scanner is empty
-        if (!sc.hasNext())
-            throw new Exception("Scanner is empty!\n");
-
-        if (!sc.hasNext(OBJECTS))
-            throw new Exception(OBJECT_ERROR_MSG);
+        validPattern(OBJECTS, OBJECT_ERROR_MSG, sc);
         String in = sc.next();
         if (in.equals("staff")){
             if (!removeStaff(parseString(sc)))
@@ -207,10 +199,7 @@ public class TextController {
      * @throws Exception if there is an invalid input
      */
     public void parseList(Scanner sc) throws Exception {
-        if (!sc.hasNext())
-            throw new Exception("Scanner is empty!\n");
-        if (!sc.hasNext(OBJECTS))
-            throw new Exception(OBJECT_ERROR_MSG);
+        validPattern(OBJECTS, OBJECT_ERROR_MSG, sc);
         String in = sc.next();
         if (in.equals("staff"))
             listStaff();
@@ -224,10 +213,7 @@ public class TextController {
      * @throws Exception if the user input is invalid
      */
     public void parseSwap(Scanner sc) throws Exception {
-        if (!sc.hasNext())
-            throw new Exception("Scanner is empty!\n");
-        if (!sc.hasNext(OBJECTS))
-            throw new Exception(OBJECT_ERROR_MSG);
+        validPattern(OBJECTS, OBJECT_ERROR_MSG, sc);
         String in = sc.next();
         if (in.equals("shift")){
             if (!swapShift(parseDay(sc), parseString(sc), parseDay(sc), parseString(sc)))
@@ -245,13 +231,7 @@ public class TextController {
      * @throws Exception if there was an invalid input
      */
     public RosterModel.DAY_NAMES parseDay(Scanner sc) throws Exception{
-        // Scanner is empty
-        if (!sc.hasNext())
-            throw new Exception("Scanner is empty!\n");
-
-        // Invalid boolean check
-        if (!sc.hasNext(DAYS))
-            throw new Exception(DAY_ERROR_MSG);
+        validPattern(DAYS, DAY_ERROR_MSG, sc);
         String in = sc.next();
         switch (in){
             case "mon": return (RosterModel.DAY_NAMES.MONDAY);
@@ -273,14 +253,7 @@ public class TextController {
      * @throws Exception if invalid input
      */
     public boolean parseBoolean(Scanner sc) throws Exception {
-        // Scanner is empty
-        if (!sc.hasNext())
-            throw new Exception("Scanner is empty!\n");
-
-        // Invalid boolean check
-        if (!sc.hasNext(BOOLEAN))
-            throw new Exception(BOOLEAN_EXCEPTION_MSG);
-
+        validPattern(BOOLEAN, BOOLEAN_EXCEPTION_MSG, sc);
         String in = sc.next();
 
         // Checks all the true cases, if its not these it must be false
@@ -294,15 +267,7 @@ public class TextController {
      * @throws Exception if the input is invalid
      */
     public int parseInteger(Scanner sc) throws Exception {
-        // Scanner is empty
-        if (!sc.hasNext())
-            throw new Exception("Scanner is empty!\n");
-
-        // Invalid integer check
-        if (!sc.hasNext(INTEGER))
-            throw new Exception(INTEGER_EXCEPTION_MSG);
-
-        // Converts the integer into a string
+        validPattern(INTEGER, INTEGER_EXCEPTION_MSG, sc);
         String in = sc.next();
         return Integer.parseInt(in);
     }
@@ -315,14 +280,25 @@ public class TextController {
      * @throws Exception if an invalid inputs
      */
     public String parseString(Scanner sc) throws Exception{
-        // Scanner is empty
-        if (!sc.hasNext())
-            throw new Exception("Scanner is empty!\n");
-
-        if (!sc.hasNext(LETTERS))
-            throw new Exception(WORD_EXCEPTION_MSG);
-
+        validPattern(LETTERS, WORD_EXCEPTION_MSG, sc);
         return sc.next();
+    }
+
+    /**
+     * This method checks whether the next input matches a specific pattern
+     * @param patternToMatch the input should be part of this pattern
+     * @param errorMessage to display if it does not match
+     * @param userInput to check agaisnt the pattern
+     * @return true if they match, false/error otherwise
+     * @throws Exception if the pattern does not match or the scanner is empty
+     */
+    public boolean validPattern(Pattern patternToMatch, String errorMessage,Scanner userInput) throws Exception {
+        if (!userInput.hasNext())
+            throw new Exception("Scanner is empty!\n");
+        boolean isValid = userInput.hasNext(patternToMatch);
+        if (!isValid)
+            throw new Exception(errorMessage);
+        return isValid;
     }
 
     /**

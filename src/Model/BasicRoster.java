@@ -44,12 +44,7 @@ public class BasicRoster extends RosterModel {
         ArrayList<Staff> managers = getManagers();
 
         // Add all the manager shifts in for the week
-        for (int d=0; d<DAY_NAMES.values().length; d++) {
-            for (Staff m: managers){
-                if (this.get(d).size() < MANGERS_NEEDED_PER_DAY && m.getShiftCount() < SHIFT_MAX)
-                    this.get(d).add(new Shift(m, "0900", "1600", Staff.SECTION.MANAGER));
-            }
-        }
+
     }
 
     /**
