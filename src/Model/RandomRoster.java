@@ -7,23 +7,10 @@ import java.util.ArrayList;
 
 public class RandomRoster extends RosterModel {
 
-    /**
-     * These are the staff for the randomly generated roster, eventually they will be
-     * stored and read from a serialized file
-     */
     private String[] staffToAdd = {"Az", "Jack", "Harry", "Jesse", "Jerome", "Bella"};
-
-    /**
-     * These are the start times, they will eventually be stored as a tuple linked to a
-     * shift type, that will store the end time and the break time as well
-     */
     private String[] startTimes = {"0900", "1000", "1100", "1200", "1500", "1600", "1700"};
     private String[] endTimes = {"1500", "1600", "1700", "1900", "1100", "2200", "2100"};
 
-    /**
-     *  The normal constructor for the Random Roster, eventually needs to read a file
-     *  and then create the roster based off that
-     */
     public RandomRoster(String date){
         // Initializes the rosters days using the super class
         super(date);
@@ -31,9 +18,6 @@ public class RandomRoster extends RosterModel {
         run();
     }
 
-    /**
-     * This method generates the random roster and populated it
-     */
     public void run(){
         for (int i=0; i<staffToAdd.length; i++)
             staff.add(new Staff(staffToAdd[i], Math.random() > 0.9));

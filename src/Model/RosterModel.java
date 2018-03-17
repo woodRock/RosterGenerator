@@ -16,9 +16,6 @@ import java.util.Comparator;
  */
 public abstract class RosterModel extends ArrayList<ArrayList<Shift>>{
 
-    /**
-     * This enum was create to store the busyness of a shift
-     */
     public enum Difficulty {
         DEAD (0), EASY (1), MEDIUM (2), HARD (3), INSANE (4);
 
@@ -33,10 +30,7 @@ public abstract class RosterModel extends ArrayList<ArrayList<Shift>>{
         }
     }
 
-    /**
-     *  Stores the day names so that they can be manipulated (i.e shortened) easily
-     */
-      public enum DAY_NAMES {
+    public enum DAY_NAMES {
         MONDAY (0), TUESDAY (1), WEDNESDAY (2), THURSDAY (3), FRIDAY (4), SATURDAY (5), SUNDAY(6);
 
         private int day;
@@ -52,30 +46,11 @@ public abstract class RosterModel extends ArrayList<ArrayList<Shift>>{
     }
 
     public static final int DAYS_IN_WEEK = 7;
-
-    /**
-     * This stores the staff for this iteration of the roster
-     */
     protected ArrayList<Staff> staff = new ArrayList<>();
-
     private String date;
-
-    /**
-     * This section stores the information for the tweaks which affect
-     * the creation of the roster, (i.e. its selection process)
-     */
     public boolean rain;
-
-    /**
-     * Stores the difficulty or how busy a shift is going to be,
-     * this effects how many staff will be needed for each shift
-     */
     private Difficulty difficulty;
 
-    /**
-     * This is the default constructor for the RosterModel
-     * @param date to be printed at the top of the roster
-     */
     public RosterModel(String date){
         this.date = date;
         // Initialize the second dimension of the roster
@@ -84,12 +59,6 @@ public abstract class RosterModel extends ArrayList<ArrayList<Shift>>{
         }
     }
 
-    /**
-     * This method will sort the shifts for the day according
-     * to there start times, earlier ones first
-     * @param shifts the day to be sorted
-     * @return the sorted day
-     */
     public static ArrayList<Shift> sortDay(ArrayList<Shift> shifts){
         // Compares start times to each other
         Comparator<Shift> TIME = new Comparator<Shift>() {
@@ -102,11 +71,6 @@ public abstract class RosterModel extends ArrayList<ArrayList<Shift>>{
         return shifts;
     }
 
-    /**
-     * This method sorts the roster by sections
-     * @param section to be sorted into
-     * @return only shifts from this section
-     */
     public RosterModel getRosterSection(Staff.SECTION section){
 
         RosterModel output = new BasicRoster(date);
@@ -120,13 +84,6 @@ public abstract class RosterModel extends ArrayList<ArrayList<Shift>>{
         return output;
     }
 
-    /**
-     * This method swaps two individual shifts with eachother
-     * @param d1 first day to swap
-     * @param n1 name of the worker to swap
-     * @param d2 second day to be swapped with
-     * @param n2 name of the second worker to swap with the first
-     */
     public boolean swapShift(DAY_NAMES d1, String n1, DAY_NAMES d2, String n2){
         // TODO: 3/14/18 fix this (doesn't swap over days), and sections
         // This temp local variable is needed for the swap

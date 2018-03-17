@@ -10,37 +10,15 @@ import Util.Time;
  */
 public class Shift implements Comparable<Shift>{
 
-    /**
-     * Stores the type of shift, as this changes what information
-     * is required
-     */
     public StrategyShift shiftType;
-
     public RosterModel.DAY_NAMES day;
-
-    /**
-     * This stores the previous and next shift in a
-     * double linked-list like manor
-     */
     public Shift previous;
-
     public Shift next;
-
     private Staff staffMember;
-
     private Staff.SECTION section;
-
-    /**
-     * The times related that will be stored for any
-     * type of shift
-     */
     private Time startTime;
-
     private Time endTime;
 
-    /**
-     * Default constructor for a shift, not fully implemented yet
-     */
     public Shift(Staff staff, String startTime, String endTime, Staff.SECTION section){
         this.staffMember = staff;
         this.section = section;
@@ -48,20 +26,10 @@ public class Shift implements Comparable<Shift>{
         this.endTime = new Time(endTime);
     }
 
-    /**
-     * This method checks who is working the shift, against
-     * the staff member assumed to be working it
-     * @param name to be checked for
-     * @return true if working, false otherwise
-     */
     public boolean equals(String name){
         return this.staffMember.getName().equals(name);
     }
 
-    /**
-     * This method returns the shift as a string
-     * @return the string ready to be displayed
-     */
     public String toString(){
         String out = "";
         out += this.staffMember.getName() + ":\t" +

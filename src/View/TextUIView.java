@@ -9,32 +9,17 @@ import Util.Staff;
 public class TextUIView {
 
     private final static String HORIZONTAL_CELL_BORDER = "|";
-
     private final static String VERTICAL_CELL_BORDER = "-";
-
     private final static int ROSTER_CHARACTER_WIDTH = 41;
-
     private final static int CELL_SPACING = 5;
-
     private RosterModel roster;
-
     private String rosterText;
 
-    /**
-     * The default constructor for the text representation
-     * of the user interface
-     * @param roster to be converted to text
-     */
     public TextUIView(RosterModel roster){
         this.roster = roster;
         this.rosterText = buildRoster(roster);
     }
 
-    /**
-     * This method builds the string for the TextUIView
-     * @param roster to be represented by text
-     * @return a text representation of the roster
-     */
     private String buildRoster(RosterModel roster){
 
         // This will eventually be the full roster;
@@ -69,12 +54,6 @@ public class TextUIView {
         return output;
     }
 
-    /**
-     * This method returns a centered title based on the width
-     * of the roster
-     * @param titleText to be centered and prepared for display
-     * @return the finished title with borders
-     */
     public String getTitle(String titleText){
         int titlePadding = 2;
         String output = "";
@@ -89,12 +68,6 @@ public class TextUIView {
         return output;
     }
 
-    /**
-     * This method adds a row of shifts to the text representation
-     * of the roster
-     * @param roster to be turned into text
-     * @return the text representation
-     */
     public String addShiftRow(RosterModel roster, int dayNo, int n){
         String output = "";
 
@@ -129,13 +102,6 @@ public class TextUIView {
         return output;
     }
 
-    /**
-     * This method formats the text for a line on the text representation
-     * of the roster
-     * @param text to be printed
-     * @param first is it on the first column?
-     * @return the formatted text
-     */
     public String formatSpacingText(String text, boolean first){
         String startSpace = "";
         String endSpace = "";
@@ -166,10 +132,6 @@ public class TextUIView {
         return startSpace + text + endSpace;
     }
 
-    /**
-     * Adds the day names across the top of the roster
-     * @return
-     */
     public String addDays(){
         String output = "";
 
@@ -194,10 +156,6 @@ public class TextUIView {
         return output;
     }
 
-    /**
-     * This method adds a long horizontal on the roster
-     * @return the line string to be added
-     */
     public String addLine(){
         String output = "";
         // Loop add a Line underneath the day titles
@@ -209,17 +167,10 @@ public class TextUIView {
         return output;
     }
 
-    /**
-     * This method updates the text display of the roster
-     * given that a change has been made
-     */
     public void update(){
         this.rosterText = buildRoster(this.roster);
     }
 
-    /**
-     * Displays the text representation of the roster to the user
-     */
     public void print(){
         this.rosterText = buildRoster(this.roster);
         System.out.print(rosterText);
