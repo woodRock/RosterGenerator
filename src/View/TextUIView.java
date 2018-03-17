@@ -50,7 +50,6 @@ public class TextUIView {
                 output += addLine();
             }
         }
-
         return output;
     }
 
