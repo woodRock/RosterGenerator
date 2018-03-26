@@ -7,11 +7,11 @@ import Util.Staff;
  * This class captures allows for the roster to be represented as text
  */
 public class TextUIView {
-
     private final static String HORIZONTAL_CELL_BORDER = "|";
     private final static String VERTICAL_CELL_BORDER = "-";
     private final static int ROSTER_CHARACTER_WIDTH = 41;
     private final static int CELL_SPACING = 5;
+
     private RosterModel roster;
     private String rosterText;
 

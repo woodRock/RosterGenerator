@@ -16,11 +16,6 @@ import java.util.regex.Pattern;
  * manipulate the text interface.
  */
 public class TextController {
-
-    private final static String TERMINAL_NAME = "rg2000";
-    private TextUIView view;
-    private RosterModel model;
-
     //Patterns for the inputs that are allowed in the user input
     private static final Pattern COMMAND = Pattern.compile("run|exit|print|rain|mode|clear|add|rm|ls|swap|help");
     private static final Pattern BOOLEAN = Pattern.compile("on|off|true|false|0|1");
@@ -31,20 +26,17 @@ public class TextController {
 
     //Exception messages for the various syntax errors the user may encounter
     private static final String TEXT_INPUT_ERROR_PREFACE = "\nInput Error: ";
-    private static final String BOOLEAN_EXCEPTION_MSG =
-            "Invalid Boolean!\nUsage: <command> <bool>\n<bool>: on\t true\t off\t false\t 0\t 1\n";
-    private static final String COMMAND_EXCEPTION_MSG =
-            "Invalid Command!\nUsage: <command>\n<command>: run\t print\t exit\t clear\n";
-    private static final String INTEGER_EXCEPTION_MSG =
-            "Invalid Integer!\nUsage: <command> <integer>\n<integer>: 0 - 9 (a single non-decimal positive number)\n";
-    private static final String WORD_EXCEPTION_MSG =
-            "Invalid Word!\nUsage: <command> <word>\n<name>: A-Z a-z (only letters are allowed)\n";
-    private static final String OBJECT_ERROR_MSG =
-            "Invalid Object!\nUsage: <command> <object>\n<object>: staff\t roster\t shift\n";
-    private static final String DAY_ERROR_MSG =
-            "Invalid Day!\nUsage: <command> <object> <day>\n<day>: mon\t tues\t wed\t thurs\t fri\t Sat\t Sun\t";
+    private static final String BOOLEAN_EXCEPTION_MSG = "Invalid Boolean!\nUsage: <command> <bool>\n<bool>: on\t true\t off\t false\t 0\t 1\n";
+    private static final String COMMAND_EXCEPTION_MSG = "Invalid Command!\nUsage: <command>\n<command>: run\t print\t exit\t clear\n";
+    private static final String INTEGER_EXCEPTION_MSG = "Invalid Integer!\nUsage: <command> <integer>\n<integer>: 0 - 9 (a single non-decimal positive number)\n";
+    private static final String WORD_EXCEPTION_MSG = "Invalid Word!\nUsage: <command> <word>\n<name>: A-Z a-z (only letters are allowed)\n";
+    private static final String OBJECT_ERROR_MSG = "Invalid Object!\nUsage: <command> <object>\n<object>: staff\t roster\t shift\n";
+    private static final String DAY_ERROR_MSG = "Invalid Day!\nUsage: <command> <object> <day>\n<day>: mon\t tues\t wed\t thurs\t fri\t Sat\t Sun\t";
 
     private static final HashMap<String, MethodArgumentComposite> commandsToMethodCalls = new HashMap<>();
+    private final static String TERMINAL_NAME = "rg2000";
+    private TextUIView view;
+    private RosterModel model;
 
     public TextController(RosterModel model, TextUIView view){
         this.model = model;
